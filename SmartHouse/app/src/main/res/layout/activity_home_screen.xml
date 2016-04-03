@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".HomeScreen">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="180dp"
+        android:id="@+id/imageView"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/logo" />
+
+    <ImageButton
+        android:layout_width="180dp"
+        android:layout_height="200dp"
+        android:id="@+id/imageButton"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:src="@mipmap/stats"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="openStats"/>
+
+    <ImageButton
+        android:layout_width="180dp"
+        android:layout_height="200dp"
+        android:id="@+id/imageButton2"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:src="@mipmap/command"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:scaleType="center"
+        android:layout_alignParentStart="false"
+        android:contentDescription="@string/abc_action_mode_done"
+        android:onClick="openCommandCenter"/>
+
+    <ImageButton
+        android:layout_width="180dp"
+        android:layout_height="220dp"
+        android:id="@+id/imageButton3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:src="@mipmap/planner"
+        android:onClick="openPlanner"/>
+
+    <ImageButton
+        android:layout_width="180dp"
+        android:layout_height="220dp"
+        android:id="@+id/imageButton4"
+        android:layout_alignTop="@+id/imageButton3"
+        android:layout_toRightOf="@+id/imageButton"
+        android:layout_toEndOf="@+id/imageButton"
+        android:background="@android:color/transparent"
+        android:clickable="false"
+        android:src="@mipmap/notification"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/abc_action_mode_done"
+        android:onClick="openNotifications"/>
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Command Center"
+        android:id="@+id/textView"
+        android:editable="false"
+        android:labelFor="@id/imageButton2"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textColor="#284895"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toRightOf="@+id/imageButton"
+        android:layout_toEndOf="@+id/imageButton" />
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Stats"
+        android:id="@+id/textView2"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:labelFor="@id/imageButton"
+        android:textColor="#FF284895"
+        android:layout_alignBottom="@+id/imageButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Planner"
+        android:id="@+id/textView3"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="#FF284895"
+        android:labelFor="@id/imageButton3"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Notifications"
+        android:id="@+id/textView4"
+        android:layout_alignBottom="@+id/imageButton4"
+        android:layout_alignRight="@+id/imageButton4"
+        android:layout_alignEnd="@+id/imageButton4"
+        android:labelFor="@id/imageButton4"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:textColor="#FF284895" />
+
+</RelativeLayout>
