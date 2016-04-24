@@ -8,7 +8,7 @@ public class CmdButtonListItem implements CmdListItem{
     private String status;
 
     public String getTitle() {
-        return title;
+        return title == null? " " : title;
     }
 
     public void setTitle(String newTitle) {

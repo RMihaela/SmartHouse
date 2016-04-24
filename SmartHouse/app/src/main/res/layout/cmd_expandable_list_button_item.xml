@@ -14,7 +14,7 @@
         android:paddingLeft="10dp" />
 
     <TextView
-        android:id="@+id/cmdSatusLabel"
+        android:id="@+id/cmdStatusLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="17dip"
@@ -39,11 +39,11 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/cmdSatusLabel"
         android:background="@android:color/holo_blue_dark"
         android:textColor="#f7f7f7"
         android:layout_marginRight="2dp"
         android:textSize="10dp"
         android:layout_marginTop="2dp"
+        android:layout_alignBottom="@+id/cmdStatusLabel"
         android:layout_marginBottom="2dp" />
 </RelativeLayout>

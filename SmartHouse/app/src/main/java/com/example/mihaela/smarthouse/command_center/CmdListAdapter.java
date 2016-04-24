@@ -1,6 +1,7 @@
 package com.example.mihaela.smarthouse.command_center;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +29,7 @@ public class CmdListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        ArrayList<CmdButtonListItem> chList = groups.get(groupPosition).getItems();
+        ArrayList<CmdListItem> chList = groups.get(groupPosition).getItems();
         return chList.get(childPosition);
     }
 
@@ -41,26 +42,42 @@ public class CmdListAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
 
-        CmdButtonListItem child = (CmdButtonListItem) getChild(groupPosition, childPosition);
-        if (convertView == null) {
-            LayoutInflater infalInflater = (LayoutInflater) context
-                    .getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.cmd_expandable_list_switch_item, null);
+        CmdListItem child = (CmdListItem) getChild(groupPosition, childPosition);
+
+
+        if(child.getClass().getSimpleName().equals("CmdButtonListItem")) {
+            if (convertView == null) {
+                LayoutInflater infalInflater = (LayoutInflater) context
+                        .getSystemService(context.LAYOUT_INFLATER_SERVICE);
+                convertView = infalInflater.inflate(R.layout.cmd_expandable_list_button_item, null);
+            }
+            TextView title = (TextView) convertView.findViewById(R.id.cmdTitleLabel);
+            TextView status = (TextView) convertView.findViewById(R.id.cmdStatusLabel);
+
+
+            title.setText(child.getClass().getSimpleName());
+            //title.setText(child.getTitle().toString());
+            status.setText(child.getStatus());
+
         }
-        TextView title = (TextView) convertView.findViewById(R.id.cmdTitleLabel);
-        //TextView status = (TextView) convertView.findViewById(R.id.cmdSatusLabel);
 
+        else
+        if(child.getClass().getSimpleName().equals("CmdSwitchListItem")) {
+            if (convertView == null) {
+                LayoutInflater infalInflater = (LayoutInflater) context
+                        .getSystemService(context.LAYOUT_INFLATER_SERVICE);
+                convertView = infalInflater.inflate(R.layout.cmd_expandable_list_switch_item, null);
+            }
+            TextView title = (TextView) convertView.findViewById(R.id.cmdSwitchTitleLabel);
 
-        title.setText(child.getTitle().toString());
-        //status.setText(child.getStatus());
-
-
+            //title.setText(child.getTitle().toString());
+        }
         return convertView;
     }
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        ArrayList<CmdButtonListItem> chList = groups.get(groupPosition).getItems();
+        ArrayList<CmdListItem> chList = groups.get(groupPosition).getItems();
         return chList.size();
     }
 

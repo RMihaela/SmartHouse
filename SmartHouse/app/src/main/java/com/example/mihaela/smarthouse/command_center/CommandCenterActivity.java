@@ -32,28 +32,28 @@ public class CommandCenterActivity extends AppCompatActivity {
 
         ArrayList<CmdListHeader> list = new ArrayList<>();
 
-        ArrayList<CmdButtonListItem> ch_list;
+        ArrayList<CmdListItem> ch_list;
 
         int size = 4;
 
         for(String group_name : group_names){
-            int j = 0;
+            //int j = 0;
             CmdListHeader gru = new CmdListHeader();
             gru.setName(group_name);
 
-            ch_list = new ArrayList<CmdButtonListItem>();
-            for(; j < size / 2; j++){
-                CmdButtonListItem ch = new CmdButtonListItem();
+            ch_list = new ArrayList<CmdListItem>();
+            for(int j = 0; j < size; j++){
+                CmdListItem ch = new CmdButtonListItem();
                 ch.setTitle(item_names[j]);
                 ch.setStatus("status");
                 ch_list.add(ch);
             }
-            /*for(; j < size / 2; j++){
-                CmdSwitchListItem ch = new CmdSwitchListItem();
-                ch.setTitle(item_names[j]);
-                ch.setStatus("status");
-                ch_list.add(ch);
-            }*/
+
+            for(int i = 0; i < 3; i++){
+                CmdSwitchListItem chs = new CmdSwitchListItem();
+                //chs.setTitle(item_names[i]);
+                ch_list.add(chs);
+            }
 
             gru.setItems(ch_list);
             list.add(gru);
