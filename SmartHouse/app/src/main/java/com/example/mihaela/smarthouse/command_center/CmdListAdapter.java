@@ -28,7 +28,7 @@ public class CmdListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        ArrayList<CmdSpinnerListItem> chList = groups.get(groupPosition).getItems();
+        ArrayList<CmdButtonListItem> chList = groups.get(groupPosition).getItems();
         return chList.get(childPosition);
     }
 
@@ -41,27 +41,26 @@ public class CmdListAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
 
-        CmdSpinnerListItem child = (CmdSpinnerListItem) getChild(groupPosition, childPosition);
+        CmdButtonListItem child = (CmdButtonListItem) getChild(groupPosition, childPosition);
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) context
                     .getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.cmd_expandable_list_spinner_item, null);
+            convertView = infalInflater.inflate(R.layout.cmd_expandable_list_switch_item, null);
         }
         TextView title = (TextView) convertView.findViewById(R.id.cmdTitleLabel);
-        NumberPicker numberPicker = (NumberPicker) convertView.findViewById(R.id.numberPicker);
+        //TextView status = (TextView) convertView.findViewById(R.id.cmdSatusLabel);
 
 
         title.setText(child.getTitle().toString());
-        numberPicker.setValue((int)child.getStatus());
-        numberPicker.setMaxValue(10);
-        numberPicker.setMinValue(0);
+        //status.setText(child.getStatus());
+
 
         return convertView;
     }
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        ArrayList<CmdSpinnerListItem> chList = groups.get(groupPosition).getItems();
+        ArrayList<CmdButtonListItem> chList = groups.get(groupPosition).getItems();
         return chList.size();
     }
 

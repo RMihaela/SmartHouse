@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class CmdListHeader {
     private String Name;
-    private ArrayList<CmdSpinnerListItem> Items;
+    private ArrayList<CmdButtonListItem> Items;
 
     public String getName() {
         return Name;
@@ -17,11 +17,11 @@ public class CmdListHeader {
         this.Name = name;
     }
 
-    public ArrayList<CmdSpinnerListItem> getItems() {
+    public ArrayList<CmdButtonListItem> getItems() {
         return Items;
     }
 
-    public void setItems(ArrayList<CmdSpinnerListItem> Items) {
+    public void setItems(ArrayList<CmdButtonListItem> Items) {
         this.Items = Items;
     }
 

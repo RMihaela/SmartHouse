@@ -3,9 +3,9 @@ package com.example.mihaela.smarthouse.command_center;
 /**
  * Created by Mihaela on 24.04.2016.
  */
-public class CmdSpinnerListItem {
+public class CmdButtonListItem implements CmdListItem{
     private String title;
-    private int status;
+    private String status;
 
     public String getTitle() {
         return title;
@@ -15,11 +15,11 @@ public class CmdSpinnerListItem {
         this.title = newTitle;
     }
 
-    public int getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(int newStatus) {
+    public void setStatus(String newStatus) {
         this.status = newStatus;
     }
 }
