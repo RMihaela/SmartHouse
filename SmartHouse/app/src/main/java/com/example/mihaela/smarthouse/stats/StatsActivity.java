@@ -28,25 +28,18 @@ public class StatsActivity extends AppCompatActivity {
 
     public ArrayList<StatsListHeader> SetStandardGroups() {
 
-        String group_names[] = { "GROUP A", "GROUP B", "GROUP C", "GROUP D",
-                "GROUP E", "GROUP F", "GROUP G", "GROUP H" };
+        String group_names[] = { "Room1", "Room2", "Room3", "Room4", "Room5" };
 
-        String country_names[] = { "Brazil", "Mexico", "Croatia", "Cameroon",
-                "Netherlands", "chile", "Spain", "Australia", "Colombia",
-                "Greece", "Ivory Coast", "Japan", "Costa Rica", "Uruguay",
-                "Italy", "England", "France", "Switzerland", "Ecuador",
-                "Honduras", "Agrentina", "Nigeria", "Bosnia and Herzegovina",
-                "Iran", "Germany", "United States", "Portugal", "Ghana",
-                "Belgium", "Algeria", "Russia", "Korea Republic" };
+        String country_names[] = { "Sensor1", "Sensor2", "Sensor3", "Sensor4" };
 
         ArrayList<StatsListHeader> list = new ArrayList<StatsListHeader>();
 
         ArrayList<StatsListItem> ch_list;
 
         int size = 4;
-        int j = 0;
 
         for (String group_name : group_names) {
+            int j = 0;
             StatsListHeader gru = new StatsListHeader();
             gru.setName(group_name);
 
@@ -59,8 +52,6 @@ public class StatsActivity extends AppCompatActivity {
             }
             gru.setItems(ch_list);
             list.add(gru);
-
-            size = size + 4;
         }
 
         return list;

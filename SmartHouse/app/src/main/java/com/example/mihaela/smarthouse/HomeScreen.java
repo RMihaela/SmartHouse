@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
+import com.example.mihaela.smarthouse.command_center.CommandCenterActivity;
 import com.example.mihaela.smarthouse.planner.PlannerActivity;
 import com.example.mihaela.smarthouse.stats.StatsActivity;
 
@@ -25,7 +26,7 @@ public class HomeScreen extends AppCompatActivity {
     }
 
     public void openCommandCenter(View v){
-        startActivity(new Intent(HomeScreen.this, CommandCenter.class));
+        startActivity(new Intent(HomeScreen.this, CommandCenterActivity.class));
     }
 
     public void openPlanner(View v){
