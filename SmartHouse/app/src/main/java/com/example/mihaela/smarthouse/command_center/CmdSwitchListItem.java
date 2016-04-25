@@ -5,7 +5,7 @@ package com.example.mihaela.smarthouse.command_center;
  */
 public class CmdSwitchListItem implements CmdListItem{
     private String title;
-    private String status = new String("");
+    private String status;
 
     public String getTitle() {
         return title == null? " " : title;
@@ -16,7 +16,7 @@ public class CmdSwitchListItem implements CmdListItem{
     }
 
     public String getStatus() {
-        return status;
+        return status == null? "" : status;
     }
 
     public void setStatus(String newStatus) {

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/cmd_exp_list"
         android:choiceMode="singleChoice"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/cmdTitleView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

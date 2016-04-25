@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class CmdListHeader {
     private String Name;
-    private ArrayList<CmdListItem> Items;
+    private ArrayList<CmdListItem> Items=new ArrayList<>();
 
     public String getName() {
         return Name;

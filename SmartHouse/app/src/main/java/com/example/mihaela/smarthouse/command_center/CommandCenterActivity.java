@@ -2,6 +2,7 @@ package com.example.mihaela.smarthouse.command_center;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ExpandableListView;
 
 import com.example.mihaela.smarthouse.R;
@@ -32,7 +33,7 @@ public class CommandCenterActivity extends AppCompatActivity {
 
         ArrayList<CmdListHeader> list = new ArrayList<>();
 
-        ArrayList<CmdListItem> ch_list;
+       // ArrayList<CmdListItem> ch_list;
 
         int size = 4;
 
@@ -41,7 +42,8 @@ public class CommandCenterActivity extends AppCompatActivity {
             CmdListHeader gru = new CmdListHeader();
             gru.setName(group_name);
 
-            ch_list = new ArrayList<CmdListItem>();
+            ArrayList<CmdListItem> ch_list = new ArrayList<CmdListItem>();
+            ch_list.clear();
             for(int j = 0; j < size; j++){
                 CmdListItem ch = new CmdButtonListItem();
                 ch.setTitle(item_names[j]);
@@ -50,14 +52,21 @@ public class CommandCenterActivity extends AppCompatActivity {
             }
 
             for(int i = 0; i < 3; i++){
-                CmdSwitchListItem chs = new CmdSwitchListItem();
-                //chs.setTitle(item_names[i]);
+                CmdListItem chs = new CmdSwitchListItem();
+                chs.setTitle(item_names[i]);
                 ch_list.add(chs);
             }
+
 
             gru.setItems(ch_list);
             list.add(gru);
 
+        }
+        for (CmdListHeader head:list){
+            Log.d("CREATION", head.getName() );
+            for(CmdListItem item: head.getItems()){
+                Log.d("CREATION", item.getTitle()+" "+item.getClass().getSimpleName() );
+            }
         }
 
         return list;

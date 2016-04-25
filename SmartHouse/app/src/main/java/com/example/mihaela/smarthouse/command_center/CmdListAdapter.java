@@ -20,11 +20,26 @@ import java.util.ArrayList;
 public class CmdListAdapter extends BaseExpandableListAdapter {
 
     private Context context;
-    private ArrayList<CmdListHeader> groups;
+    private ArrayList<CmdListHeader> groups = new ArrayList<>();
 
     public CmdListAdapter(Context context, ArrayList<CmdListHeader> groups) {
         this.context = context;
         this.groups = groups;
+    }
+
+    @Override
+    public int getChildTypeCount() {
+        return 2;
+    }
+    /*
+    type 0 == CmdButtonListItem
+         1 == CmdSwitchListItem
+     */
+    @Override
+    public int getChildType(int groupPosition, int childPosition) {
+        if (getChild(groupPosition, childPosition).getClass().getSimpleName().equals("CmdButtonListItem"))
+            return 0;
+        return 1;
     }
 
     @Override
@@ -41,36 +56,32 @@ public class CmdListAdapter extends BaseExpandableListAdapter {
     @Override
     public View getChildView(int groupPosition, int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
+        int childType = getChildType(groupPosition, childPosition);
 
         CmdListItem child = (CmdListItem) getChild(groupPosition, childPosition);
 
-
-        if(child.getClass().getSimpleName().equals("CmdButtonListItem")) {
+        if (childType == 0) {
             if (convertView == null) {
                 LayoutInflater infalInflater = (LayoutInflater) context
                         .getSystemService(context.LAYOUT_INFLATER_SERVICE);
                 convertView = infalInflater.inflate(R.layout.cmd_expandable_list_button_item, null);
             }
-            TextView title = (TextView) convertView.findViewById(R.id.cmdTitleLabel);
-            TextView status = (TextView) convertView.findViewById(R.id.cmdStatusLabel);
+            TextView titleTextView = (TextView) convertView.findViewById(R.id.cmdTitleLabel);
+            TextView statusTextView = (TextView) convertView.findViewById(R.id.cmdStatusLabel);
 
+//            Log.d("CREATION", "TITLE: " + child.getTitle().toString() + " STATUS: " + statusTextView.toString());
+            titleTextView.setText(child.getTitle().toString());
+            statusTextView.setText(child.getStatus());
 
-            title.setText(child.getClass().getSimpleName());
-            //title.setText(child.getTitle().toString());
-            status.setText(child.getStatus());
-
-        }
-
-        else
-        if(child.getClass().getSimpleName().equals("CmdSwitchListItem")) {
+        } else if (child.getClass().getSimpleName().equals("CmdSwitchListItem")) {
             if (convertView == null) {
                 LayoutInflater infalInflater = (LayoutInflater) context
                         .getSystemService(context.LAYOUT_INFLATER_SERVICE);
                 convertView = infalInflater.inflate(R.layout.cmd_expandable_list_switch_item, null);
             }
             TextView title = (TextView) convertView.findViewById(R.id.cmdSwitchTitleLabel);
+            title.setText(child.getTitle().toString());
 
-            //title.setText(child.getTitle().toString());
         }
         return convertView;
     }

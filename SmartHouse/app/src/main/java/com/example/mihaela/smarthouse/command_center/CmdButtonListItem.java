@@ -16,7 +16,7 @@ public class CmdButtonListItem implements CmdListItem{
     }
 
     public String getStatus() {
-        return status;
+        return status == null ? "" : status;
     }
 
     public void setStatus(String newStatus) {
