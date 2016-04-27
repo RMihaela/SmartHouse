@@ -111,5 +111,10 @@ public class CommandCenterActivity extends AppCompatActivity {
         return temp;
     }
 
+    public int getIndexOf(CmdListHeader item){
+        if(ExpListItems.contains(item))
+            return ExpListItems.indexOf(item);
+        return -1;
+    }
 
 }
