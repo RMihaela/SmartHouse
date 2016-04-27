@@ -10,19 +10,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlannerActivity extends AppCompatActivity {
-    List<PlannerListItem> plannerItemsList = new ArrayList<>();
+    private List<PlannerListItem> plannerItemsList = new ArrayList<>();
     private ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planner);
 
-        plannerItemsList.add(new PlannerListItem("Plan 0", true));
-        plannerItemsList.add(new PlannerListItem("Plan 1", true));
-        plannerItemsList.add(new PlannerListItem("Plan 2", false));
-        plannerItemsList.add(new PlannerListItem("Plan 3", true));
+        getPlannerItemsList().add(new PlannerListItem("Plan 0", true));
+        getPlannerItemsList().add(new PlannerListItem("Plan 1", true));
+        getPlannerItemsList().add(new PlannerListItem("Plan 2", false));
+        getPlannerItemsList().add(new PlannerListItem("Plan 3", true));
 
-        listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(new PlannerListAdapter(this, (ArrayList<PlannerListItem>)plannerItemsList));
+        setListView((ListView) findViewById(R.id.listView));
+        getListView().setAdapter(new PlannerListAdapter(this, (ArrayList<PlannerListItem>) getPlannerItemsList()));
+    }
+
+    public List<PlannerListItem> getPlannerItemsList() {
+        return plannerItemsList;
+    }
+
+    public void setPlannerItemsList(List<PlannerListItem> plannerItemsList) {
+        this.plannerItemsList = plannerItemsList;
+    }
+
+    public ListView getListView() {
+        return listView;
+    }
+
+    public void setListView(ListView listView) {
+        this.listView = listView;
     }
 }
