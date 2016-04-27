@@ -66,7 +66,7 @@ public class NotificationsListAdapter extends BaseAdapter {
         type.setText(notifcationItem.getType());
 
         TextView  message= (TextView)view.findViewById(R.id.message);
-        message.setText(notifcationItem.getType());
+        message.setText(notifcationItem.getMessage());
 
         return view;
     }
