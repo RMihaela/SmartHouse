@@ -8,6 +8,7 @@ import android.widget.ExpandableListView;
 import com.example.mihaela.smarthouse.R;
 
 import java.util.ArrayList;
+//Marian
 
 public class CommandCenterActivity extends AppCompatActivity {
     private CmdListAdapter ExpAdapter;
