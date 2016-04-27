@@ -7,6 +7,7 @@ import android.widget.ExpandableListView;
 import com.example.mihaela.smarthouse.R;
 
 import java.util.ArrayList;
+//Andrei
 
 public class StatsActivity extends AppCompatActivity {
 
@@ -55,6 +56,44 @@ public class StatsActivity extends AppCompatActivity {
         }
 
         return list;
+    }
+
+    public void setExpAdapter(StatsListAdapter newAdapter){
+        ExpAdapter = newAdapter;
+    }
+
+    public void setExpListItems(ArrayList<StatsListHeader> itemsList){
+        ExpListItems = itemsList;
+    }
+
+    public void addItem(StatsListHeader newItem){
+        ExpListItems.add(newItem);
+    }
+
+    public void addItemsList(ArrayList<StatsListHeader> newItems){
+        ExpListItems.addAll(newItems);
+    }
+
+    public StatsListHeader getItem(int index){
+        return (StatsListHeader)ExpListItems.get(index);
+    }
+
+    public ArrayList<StatsListHeader> getItemsList(int begin, int end){
+        ArrayList<StatsListHeader> newList = new ArrayList<>();
+        int i;
+
+        for(i = begin; i<end;i++)
+            newList.add((StatsListHeader)ExpListItems.get(i));
+
+        return newList;
+    }
+
+    public StatsListAdapter getExpAdapter(){
+        return ExpAdapter;
+    }
+
+    public ArrayList<StatsListHeader> getExpListItems(){
+        return ExpListItems;
     }
 
 }
