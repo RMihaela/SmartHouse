@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import com.example.mihaela.smarthouse.R;
 
@@ -57,10 +58,17 @@ public class NotificationsListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
         if(view==null){
-            view= this.getInflater().inflate(R.layout.activity_notifications,null);
+            view= this.getInflater().inflate(R.layout.notification_list_item,null);
         }
+        NotificationsListItem notifcationItem=notificationsItemsList.get(position);
 
-        return null;
+        TextView  type= (TextView)view.findViewById(R.id.type);
+        type.setText(notifcationItem.getType());
+
+        TextView  message= (TextView)view.findViewById(R.id.message);
+        message.setText(notifcationItem.getType());
+
+        return view;
     }
 
     public Context getContext() {
