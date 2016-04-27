@@ -18,7 +18,7 @@
         <activity android:name=".planner.PlannerActivity" />
         <activity android:name=".command_center.CommandCenterActivity" />
         <activity android:name=".stats.StatsActivity"  android:label="@string/app_name" />
-        <activity android:name=".Notifications"></activity>
+        <activity android:name=".notifications.NotificationsActivity"></activity>
     </application>
 
 </manifest>

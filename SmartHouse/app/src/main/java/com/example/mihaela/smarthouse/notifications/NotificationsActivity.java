@@ -1,9 +1,11 @@
-package com.example.mihaela.smarthouse;
+package com.example.mihaela.smarthouse.notifications;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Notifications extends AppCompatActivity {
+import com.example.mihaela.smarthouse.R;
+
+public class NotificationsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

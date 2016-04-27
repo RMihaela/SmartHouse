@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Window;
 
 import com.example.mihaela.smarthouse.command_center.CommandCenterActivity;
+import com.example.mihaela.smarthouse.notifications.NotificationsActivity;
 import com.example.mihaela.smarthouse.planner.PlannerActivity;
 import com.example.mihaela.smarthouse.stats.StatsActivity;
 
@@ -34,6 +35,6 @@ public class HomeScreen extends AppCompatActivity {
     }
 
     public void openNotifications(View v){
-        startActivity(new Intent(HomeScreen.this, Notifications.class));
+        startActivity(new Intent(HomeScreen.this, NotificationsActivity.class));
     }
 }
