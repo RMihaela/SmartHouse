@@ -21,7 +21,7 @@ public class NotificationsActivity extends AppCompatActivity {
         getNotificationsItemsList().add(new NotificationsListItem("Information","Garage doors will open at 7:00 A.M"));
         getNotificationsItemsList().add(new NotificationsListItem("Alert","You left the doors open. We took care of that for you"));
 
-        setListView((ListView) findViewById(R.id.listView));
+        setListView((ListView) findViewById(R.id.listView2));
         getListView().setAdapter(new NotificationsListAdapter(this, this.getNotificationsItemsList()));
     }
 
