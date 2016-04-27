@@ -9,6 +9,10 @@ import com.example.mihaela.smarthouse.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+Frida
+ */
+
 public class PlannerActivity extends AppCompatActivity {
     private List<PlannerListItem> plannerItemsList = new ArrayList<>();
     private ListView listView;
