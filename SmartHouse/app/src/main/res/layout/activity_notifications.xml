@@ -14,7 +14,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/listView2"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentLeft="true" />
 
     <TextView
         android:layout_width="fill_parent"
