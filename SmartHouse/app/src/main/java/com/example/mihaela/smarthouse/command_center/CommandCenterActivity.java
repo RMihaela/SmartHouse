@@ -72,4 +72,44 @@ public class CommandCenterActivity extends AppCompatActivity {
 
         return list;
     }
+
+    public void setExpAdapter(CmdListAdapter newAdapter){
+        ExpAdapter = newAdapter;
+    }
+
+    public void setExpListItems(ArrayList<CmdListHeader> newItems){
+        ExpListItems = newItems;
+    }
+
+    public void addItem(CmdListHeader item){
+        ExpListItems.add(item);
+    }
+
+    public void addItemList(ArrayList<CmdListHeader> itemList){
+        ExpListItems.addAll(itemList);
+    }
+
+    public CmdListAdapter getExpAdapter(){
+        return ExpAdapter;
+    }
+
+    public ArrayList<CmdListHeader> getExpListItems(){
+        return ExpListItems;
+    }
+
+    public CmdListHeader getItem(int index){
+        return (CmdListHeader)ExpListItems.get(index);
+    }
+
+    public ArrayList<CmdListHeader> getItems(int begin, int end){
+        ArrayList<CmdListHeader> temp = new ArrayList<>();
+        int i;
+
+        for(i = begin; i<end; i++)
+            temp.add((CmdListHeader)ExpListItems.get(i));
+
+        return temp;
+    }
+
+
 }
