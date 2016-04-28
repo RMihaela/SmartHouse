@@ -25,8 +25,16 @@ public class PlannerListAdapter extends BaseAdapter {
         // TODO Auto-generated constructor stub
         this.context = context;
         this.plannerItemsList = plannerItemsList;
-        inflater = (LayoutInflater) context
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        setInflater((LayoutInflater) context
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE));
+    }
+
+    public static LayoutInflater getInflater() {
+        return inflater;
+    }
+
+    public static void setInflater(LayoutInflater inflater) {
+        PlannerListAdapter.inflater = inflater;
     }
 
     @Override
@@ -52,7 +60,7 @@ public class PlannerListAdapter extends BaseAdapter {
         // TODO Auto-generated method stub
         View vi = convertView;
         if (vi == null)
-            vi = inflater.inflate(R.layout.planner_list_item, null);
+            vi = getInflater().inflate(R.layout.planner_list_item, null);
 
         PlannerListItem plannerItem = plannerItemsList.get(position);
 
@@ -61,5 +69,9 @@ public class PlannerListAdapter extends BaseAdapter {
         Switch switchButton = (Switch) vi.findViewById(R.id.switchButton);
         switchButton.setChecked(plannerItem.isStarted());
         return vi;
+    }
+
+    public void setContext(Context context) {
+        this.context = context;
     }
 }

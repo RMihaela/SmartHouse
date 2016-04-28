@@ -9,9 +9,10 @@ public class PlannerListItem {
     private boolean started;
 
     public PlannerListItem(String title, boolean started) {
-        this.title = title;
-        this.started = started;
+        this.setTitle(title);
+        this.setStarted(started);
     }
+
 
     public String getTitle() {
         return title;
@@ -36,4 +37,6 @@ public class PlannerListItem {
     public void setStarted(boolean started) {
         this.started = started;
     }
+
+
 }

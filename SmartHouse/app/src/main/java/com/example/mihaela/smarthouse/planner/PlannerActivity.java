@@ -45,4 +45,11 @@ public class PlannerActivity extends AppCompatActivity {
     public void setListView(ListView listView) {
         this.listView = listView;
     }
+
+    public void addPlanerItem(PlannerListItem plannItemList){
+        this.plannerItemsList.add(plannItemList);
+    }
+
+
+
 }
