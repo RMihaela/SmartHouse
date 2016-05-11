@@ -46,6 +46,8 @@ public class NotificationsActivity extends AppCompatActivity {
     }
 
     public void removeSeenNotifications(){
+
+
         List<NotificationsListItem> toRemove=new ArrayList<>();
         for(NotificationsListItem notification:notificationsItemsList){
             if(notification.isSeen()) {
