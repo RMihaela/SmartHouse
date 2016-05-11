@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class StatsActivity extends AppCompatActivity {
 
     private StatsListAdapter ExpAdapter;
-    private ArrayList<StatsListHeader> ExpListItems;
+    private ArrayList<StatsListHeader> ExpListItems = new ArrayList<>();
     private ExpandableListView ExpandList;
 
     @Override
@@ -27,7 +27,7 @@ public class StatsActivity extends AppCompatActivity {
 
     }
 
-    public ArrayList<StatsListHeader> SetStandardGroups() {
+    public static ArrayList<StatsListHeader> SetStandardGroups() {
 
         String group_names[] = { "Room1", "Room2", "Room3", "Room4", "Room5" };
 
