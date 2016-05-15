@@ -23,10 +23,7 @@ public class CommandCenterActivityTest {
     }
 
 
-    @Test
-    public void testSetStandardGroups() throws Exception {
-        //Andrei
-    }
+
 
     @Test
     public void testSetExpAdapter() throws Exception {
@@ -41,20 +38,6 @@ public class CommandCenterActivityTest {
             fail("The null test was not passed.");
     }
 
-    @Test
-    public void testSetExpListItems() throws Exception {
-        //Andrei
-    }
-
-    @Test
-    public void testAddItem() throws Exception {
-        //Andrei
-    }
-
-    @Test
-    public void testAddItemList() throws Exception {
-        //Andrei
-    }
 
     @Test
     public void testGetExpAdapterBeforeSet() throws Exception {

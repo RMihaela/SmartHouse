@@ -11,22 +11,22 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import smart_unit.ASmartUnit;
-import smart_unit.SmartAudio;
-import smart_unit.SmartBlinds;
-import smart_unit.SmartCookingMachine;
-import smart_unit.SmartFridge;
-import smart_unit.SmartGarageDoor;
-import smart_unit.SmartIndoorLights;
-import smart_unit.SmartOutdoorLights;
-import smart_unit.SmartPool;
-import smart_unit.SmartSprinklers;
-import smart_unit.SmartTV;
-import smart_unit.SmartVacuumCleaner;
-import smart_unit.SmartWashingMachine;
-import smart_unit.SmartWaterSystem;
-import smart_unit.SmartWeatherSystem;
-import smart_unit.SmartYardDoor;
+import com.example.mihaela.smarthouse.smart_unit.ASmartUnit;
+import com.example.mihaela.smarthouse.smart_unit.SmartAudio;
+import com.example.mihaela.smarthouse.smart_unit.SmartBlinds;
+import com.example.mihaela.smarthouse.smart_unit.SmartCookingMachine;
+import com.example.mihaela.smarthouse.smart_unit.SmartFridge;
+import com.example.mihaela.smarthouse.smart_unit.SmartGarageDoor;
+import com.example.mihaela.smarthouse.smart_unit.SmartIndoorLights;
+import com.example.mihaela.smarthouse.smart_unit.SmartOutdoorLights;
+import com.example.mihaela.smarthouse.smart_unit.SmartPool;
+import com.example.mihaela.smarthouse.smart_unit.SmartSprinklers;
+import com.example.mihaela.smarthouse.smart_unit.SmartTV;
+import com.example.mihaela.smarthouse.smart_unit.SmartVacuumCleaner;
+import com.example.mihaela.smarthouse.smart_unit.SmartWashingMachine;
+import com.example.mihaela.smarthouse.smart_unit.SmartWaterSystem;
+import com.example.mihaela.smarthouse.smart_unit.SmartWeatherSystem;
+import com.example.mihaela.smarthouse.smart_unit.SmartYardDoor;
 //Andrei
 
 public class StatsActivity extends AppCompatActivity {

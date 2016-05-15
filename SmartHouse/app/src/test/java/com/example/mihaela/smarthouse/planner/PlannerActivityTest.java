@@ -79,19 +79,15 @@ public class PlannerActivityTest {
         PlannerActivity instance=new PlannerActivity();
         ListView expResult;
         expResult = new ListView(null);
-
         instance.setListView(expResult);
         assertEquals(expResult,instance.getListView());
     }
 
     @Test
     public void testAddPlanerItem() throws Exception {
-        /*PlannerActivity instance = new PlannerActivity();
-        List<PlannerListItem> expResult = new ArrayList<>();
+        PlannerActivity instance = new PlannerActivity();
         PlannerListItem plan1 = new PlannerListItem("plan1",true);
-        expResult=instance.getPlannerItemsList();
-
         instance.addPlanerItem(plan1);
-        assertEquals(expResult.getItem(0),expResult);*/
+        assertEquals(instance.getPlannerItemsList().get(0),plan1);
     }
 }
