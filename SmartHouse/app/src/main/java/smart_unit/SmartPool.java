@@ -4,16 +4,16 @@ package smart_unit;
  * Created by Frida on 15-May-16.
  */
 public class SmartPool extends ASmartUnit {
-    private int ph = 7;
-    private int alkalinity = 10;
-    private int hardness = 20;
-    private int waterTemperature = 23;
+    private Integer ph = 7;
+    private Integer alkalinity = 10;
+    private Integer hardness = 20;
+    private Integer waterTemperature = 23;
 
-    SmartPool(String id, String name){
+    public SmartPool(String id, String name){
         super(id, name);
     }
 
-    public int getPh() {
+    public Integer getPh() {
         return ph;
     }
 
@@ -21,7 +21,7 @@ public class SmartPool extends ASmartUnit {
         this.ph = ph;
     }
 
-    public int getAlkalinity() {
+    public Integer getAlkalinity() {
         return alkalinity;
     }
 
@@ -29,7 +29,7 @@ public class SmartPool extends ASmartUnit {
         this.alkalinity = alkalinity;
     }
 
-    public int getHardness() {
+    public Integer getHardness() {
         return hardness;
     }
 
@@ -37,7 +37,7 @@ public class SmartPool extends ASmartUnit {
         this.hardness = hardness;
     }
 
-    public int getWaterTemperature() {
+    public Integer getWaterTemperature() {
         return waterTemperature;
     }
 

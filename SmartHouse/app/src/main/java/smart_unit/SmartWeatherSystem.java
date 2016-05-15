@@ -4,16 +4,16 @@ package smart_unit;
  * Created by Frida on 15-May-16.
  */
 public class SmartWeatherSystem extends ASmartUnit {
-    private int temperature = 30;
-    private int windSpeed = 20;
-    private int humidity = 20;
-    private int precipitations = 0;
+    private Integer temperature = 30;
+    private Integer windSpeed = 20;
+    private Integer humidity = 20;
+    private Integer precipitations = 0;
 
     public SmartWeatherSystem(String id, String name){
         super(id, name);
     }
 
-    public int getTemperature() {
+    public Integer getTemperature() {
         return temperature;
     }
 
@@ -21,7 +21,7 @@ public class SmartWeatherSystem extends ASmartUnit {
         this.temperature = temperature;
     }
 
-    public int getWindSpeed() {
+    public Integer getWindSpeed() {
         return windSpeed;
     }
 
@@ -29,7 +29,7 @@ public class SmartWeatherSystem extends ASmartUnit {
         this.windSpeed = windSpeed;
     }
 
-    public int getHumidity() {
+    public Integer getHumidity() {
         return humidity;
     }
 
@@ -37,7 +37,7 @@ public class SmartWeatherSystem extends ASmartUnit {
         this.humidity = humidity;
     }
 
-    public int getPrecipitations() {
+    public Integer getPrecipitations() {
         return precipitations;
     }
 

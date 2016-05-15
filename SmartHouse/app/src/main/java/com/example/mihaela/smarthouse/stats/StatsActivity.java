@@ -16,11 +16,17 @@ import smart_unit.SmartAudio;
 import smart_unit.SmartBlinds;
 import smart_unit.SmartCookingMachine;
 import smart_unit.SmartFridge;
+import smart_unit.SmartGarageDoor;
 import smart_unit.SmartIndoorLights;
+import smart_unit.SmartOutdoorLights;
+import smart_unit.SmartPool;
+import smart_unit.SmartSprinklers;
 import smart_unit.SmartTV;
 import smart_unit.SmartVacuumCleaner;
 import smart_unit.SmartWashingMachine;
 import smart_unit.SmartWaterSystem;
+import smart_unit.SmartWeatherSystem;
+import smart_unit.SmartYardDoor;
 //Andrei
 
 public class StatsActivity extends AppCompatActivity {
@@ -105,18 +111,59 @@ public class StatsActivity extends AppCompatActivity {
 
         indoorMap.put("Bathroom", aSmartUnitList);
 
-        /*outdoorMap.put("Weather", Arrays.asList("Temperature", "Wind Speed", "Humidity", "Precipitation"));
-        outdoorMap.put("Pool", Arrays.asList("Ph", "Alkalinity", "Hardness", "Covered", "Water Temperature"));
-        outdoorMap.put("Yard", Arrays.asList("Garage Door", "Yard Door", "Sprinklers", "Lights"));
-        outdoorMap.put("Garden", Arrays.asList("Sprinklers"));*/
+        //Weather
+        aSmartUnitList = new ArrayList<>();
+        ASmartUnit smartWheather = new SmartWeatherSystem("1", "Temperature");
+        aSmartUnitList.add(smartWheather);
+        smartWheather = new SmartWeatherSystem("2", "Humidity");
+        aSmartUnitList.add(smartWheather);
+        smartWheather = new SmartWeatherSystem("3", "Wind speed");
+        aSmartUnitList.add(smartWheather);
+        smartWheather = new SmartWeatherSystem("4", "Precipitation");
+        aSmartUnitList.add(smartWheather);
+
+        outdoorMap.put("Weather", aSmartUnitList);
+
+        //Pool
+        aSmartUnitList = new ArrayList<>();
+        ASmartUnit smartPool = new SmartPool("5", "Ph");
+        aSmartUnitList.add(smartPool);
+        smartPool = new SmartPool("6", "Hardness");
+        aSmartUnitList.add(smartPool);
+        smartPool = new SmartPool("7", "Temperature");
+        aSmartUnitList.add(smartPool);
+        smartPool = new SmartPool("8","Alkalinity");
+        aSmartUnitList.add(smartPool);
+        smartPool = new SmartPool("9","Cover");
+        aSmartUnitList.add(smartPool);
+
+        outdoorMap.put("Pool", aSmartUnitList);
+
+        //Yard
+        aSmartUnitList = new ArrayList<>();
+        ASmartUnit smartYard = new SmartYardDoor("10", "Yard door");
+        aSmartUnitList.add(smartYard);
+        smartYard = new SmartGarageDoor("11", "Garage door");
+        aSmartUnitList.add(smartYard);
+        smartYard = new SmartOutdoorLights("12", "Lights");
+        aSmartUnitList.add(smartYard);
+        smartYard = new SmartSprinklers("13", "Sprinklers");
+        aSmartUnitList.add(smartYard);
+
+        outdoorMap.put("Yard",aSmartUnitList);
+
+        //Garden
+        aSmartUnitList = new ArrayList<>();
+        ASmartUnit smartGarden = new SmartSprinklers("14", "Sprinklers");
+        aSmartUnitList.add(smartGarden);
+
+        outdoorMap.put("Garden", aSmartUnitList);
 
         ArrayList<StatsListHeader> list = new ArrayList<StatsListHeader>();
 
         ArrayList<StatsListItem> ch_list;
 
-        int size = 4;
-
-        /*for (String group_name : outdoorMap.keySet()) {
+        for (String group_name : outdoorMap.keySet()) {
             int j = 0;
             StatsListHeader gru = new StatsListHeader();
             gru.setName(group_name);
@@ -125,12 +172,66 @@ public class StatsActivity extends AppCompatActivity {
             for (; j < outdoorMap.get(group_name).size(); j++) {
                 StatsListItem ch = new StatsListItem();
                 ch.setTitle(outdoorMap.get(group_name).get(j).getName());
-                ch.setStatus("status");
+
+                ASmartUnit smartUnit = outdoorMap.get(group_name).get(j);
+                String className = smartUnit.getClass().getSimpleName();
+                String status=new String();
+
+                switch (className){
+                    case "SmartWeatherSystem":
+                        switch (smartUnit.getName()){
+                            case "Temperature":
+                                status = ((SmartWeatherSystem)smartUnit).getTemperature().toString();
+                                break;
+                            case "Humidity":
+                                status = ((SmartWeatherSystem)smartUnit).getHumidity().toString();
+                                break;
+                            case "Wind speed":
+                                status = ((SmartWeatherSystem)smartUnit).getWindSpeed().toString();
+                                break;
+                            case "Precipitation":
+                                status = ((SmartWeatherSystem)smartUnit).getPrecipitations().toString();
+                                break;
+                        }
+                        break;
+                    case "SmartPool":
+                        switch (smartUnit.getName()) {
+                            case "Ph":
+                                status = ((SmartPool)smartUnit).getPh().toString();
+                                break;
+                            case "Hardness":
+                                status = ((SmartPool)smartUnit).getHardness().toString();
+                                break;
+                            case "Temperature":
+                                status = ((SmartPool)smartUnit).getWaterTemperature().toString();
+                                break;
+                            case "Alkalinity":
+                                status = ((SmartPool)smartUnit).getAlkalinity().toString();
+                                break;
+                            case "Cover":
+                                status = smartUnit.getStringStatus();
+                                break;
+                        }
+                        break;
+                    case "SmartYardDoor" :
+                        status=smartUnit.getStringStatus();
+                        break;
+                    case "SmartGarageDoor" :
+                        status=smartUnit.getStringStatus();
+                        break;
+                    case "SmartOutdoorLights" :
+                        status=smartUnit.getStringStatus();
+                        break;
+                    case "SmartSprinklers" :
+                        status=smartUnit.getStringStatus();
+                        break;
+                }
+                ch.setStatus(status);
                 ch_list.add(ch);
             }
             gru.setItems(ch_list);
             list.add(gru);
-        }*/
+        }
 
         for (String group_name : indoorMap.keySet()) {
             int j = 0;
@@ -173,8 +274,6 @@ public class StatsActivity extends AppCompatActivity {
                     case "SmartWashingMachine":
                         status=smartUnit.getStringStatus();
                         break;
-
-
                 }
 
                 ch.setStatus(status);
