@@ -7,12 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.NumberPicker;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.mihaela.smarthouse.R;
+import com.example.mihaela.smarthouse.managers.WebServiceManager;
+import com.example.mihaela.smarthouse.smart_unit.ASmartUnit;
 
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Mihaela on 24.04.2016.
@@ -58,7 +65,7 @@ public class CmdListAdapter extends BaseExpandableListAdapter {
                              boolean isLastChild, View convertView, ViewGroup parent) {
         int childType = getChildType(groupPosition, childPosition);
 
-        CmdListItem child = (CmdListItem) getChild(groupPosition, childPosition);
+        final CmdListItem child = (CmdListItem) getChild(groupPosition, childPosition);
 
         if (childType == 0) {
             if (convertView == null) {
@@ -73,15 +80,28 @@ public class CmdListAdapter extends BaseExpandableListAdapter {
             titleTextView.setText(child.getTitle().toString());
             statusTextView.setText(child.getStatus());
 
-        } else if (child.getClass().getSimpleName().equals("CmdSwitchListItem")) {
-            if (convertView == null) {
-                LayoutInflater infalInflater = (LayoutInflater) context
-                        .getSystemService(context.LAYOUT_INFLATER_SERVICE);
-                convertView = infalInflater.inflate(R.layout.cmd_expandable_list_switch_item, null);
-            }
-            TextView title = (TextView) convertView.findViewById(R.id.cmdSwitchTitleLabel);
-            title.setText(child.getTitle().toString());
+        } else {
+            if (child.getClass().getSimpleName().equals("CmdSwitchListItem")) {
+                if (convertView == null) {
+                    LayoutInflater infalInflater = (LayoutInflater) context
+                            .getSystemService(context.LAYOUT_INFLATER_SERVICE);
+                    convertView = infalInflater.inflate(R.layout.cmd_expandable_list_switch_item, null);
+                }
+                TextView title = (TextView) convertView.findViewById(R.id.cmdSwitchTitleLabel);
+                title.setText(child.getTitle().toString());
+                final Switch switchButton = (Switch) convertView.findViewById(R.id.cmdSwitchButton);
+                switchButton.setChecked(child.getStatus().equalsIgnoreCase("on"));
+                switchButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        child.setStatus(switchButton.isChecked() ? "ON" : "OFF");
+                        ASmartUnit smUnit = child.getSmartUnit();
+                        smUnit.updateServerData(switchButton.isChecked());
 
+                    }
+                });
+
+            }
         }
         return convertView;
     }

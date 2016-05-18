@@ -6,6 +6,7 @@ package com.example.mihaela.smarthouse.stats;
 public class StatsListItem {
     private String title;
     private String status;
+    private String id;
 
     public String getTitle() {
         return title;
@@ -21,5 +22,13 @@ public class StatsListItem {
 
     public void setStatus(String newStatus) {
         this.status = newStatus;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

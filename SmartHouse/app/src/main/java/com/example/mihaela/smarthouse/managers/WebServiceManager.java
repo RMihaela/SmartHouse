@@ -123,34 +123,36 @@ public class WebServiceManager {
      */
 
     /**
-     * @param url       The URL of the method
-     * @param requestObject The json object containing the parameters that will be given to the method
-     * @param obj       A pointer to the Object whose 'objMethod' method should be called to handle the JSONObject response
-     * @param objMethod The method that will be called when a response is received. The method MUST
-     *                  only have ONE JSONObject parameter. Ex: 'public [methodReturnType] someMethod(JSONObject obj);'
+     * @param url           The URL of the method
      */
-    public void startPOSTRequest(String url, final JSONObject requestObject, final Object obj, final String objMethod) {
+    public void startPOSTRequest(String url) {
         final Class[] parameterTypes = {JSONObject.class};
 
-        JsonObjectRequest jsonPostRequest = new JsonObjectRequest(url, requestObject,
+        JsonObjectRequest jsonPostRequest = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(),
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
+
                         try {
-                            Method method = obj.getClass().getMethod(objMethod, parameterTypes);
-                            method.invoke(obj, response);
+                            Method method = this.getClass().getMethod("nothing", parameterTypes);
+                            method.invoke(this, response);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
+
                     }
                 }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Log.e("Error: ", error.getMessage());
-                }
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // Log.e("Error: ", error.getMessage());
+            }
         });
 
         requestQueue.add(jsonPostRequest);
+    }
+
+    public void nothing() {
+        return;
     }
 
     /* PUT request call example:
@@ -165,16 +167,16 @@ public class WebServiceManager {
      */
 
     /**
-     * @param url       The URL of the method
+     * @param url           The URL of the method
      * @param requestObject The json object containing the parameters that will be given to the method
-     * @param obj       A pointer to the Object whose 'objMethod' method should be called to handle the JSONObject response
-     * @param objMethod The method that will be called when a response is received. The method MUST
-     *                  only have ONE JSONObject parameter. Ex: 'public [methodReturnType] someMethod(JSONObject obj);'
+     * @param obj           A pointer to the Object whose 'objMethod' method should be called to handle the JSONObject response
+     * @param objMethod     The method that will be called when a response is received. The method MUST
+     *                      only have ONE JSONObject parameter. Ex: 'public [methodReturnType] someMethod(JSONObject obj);'
      */
     public void startPUTRequest(String url, final JSONObject requestObject, final Object obj, final String objMethod) {
         final Class[] parameterTypes = {JSONObject.class};
 
-        JsonObjectRequest jsonPostRequest = new JsonObjectRequest(url, requestObject,
+        JsonObjectRequest jsonPutRequest = new JsonObjectRequest(Request.Method.PUT, url, requestObject,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -182,17 +184,17 @@ public class WebServiceManager {
                             Method method = obj.getClass().getMethod(objMethod, parameterTypes);
                             method.invoke(obj, response);
                         } catch (Exception e) {
-                            e.printStackTrace();
+                            Log.i("[WebServiceManager]", "Couldn't find the specified method.");
                         }
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("Error: ", error.getMessage());
+                Log.e("Error: ", "");
             }
         });
 
-        requestQueue.add(jsonPostRequest);
+        requestQueue.add(jsonPutRequest);
     }
 
 }
