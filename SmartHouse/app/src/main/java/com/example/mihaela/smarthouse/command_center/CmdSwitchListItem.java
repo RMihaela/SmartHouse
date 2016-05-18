@@ -22,4 +22,9 @@ public class CmdSwitchListItem implements CmdListItem{
     public void setStatus(String newStatus) {
         this.status = newStatus;
     }
+
+    @Override
+    public void setIndex(int index) {
+
+    }
 }

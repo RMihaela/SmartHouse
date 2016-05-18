@@ -1,8 +1,11 @@
 package com.example.mihaela.smarthouse.command_center;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ExpandableListView;
 
 import com.example.mihaela.smarthouse.R;
@@ -14,6 +17,7 @@ public class CommandCenterActivity extends AppCompatActivity {
     private CmdListAdapter ExpAdapter;
     private ArrayList<CmdListHeader> ExpListItems;
     private ExpandableListView ExpandList;
+    public String name = "testare";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,7 @@ public class CommandCenterActivity extends AppCompatActivity {
                 CmdListItem ch = new CmdButtonListItem();
                 ch.setTitle(item_names[j]);
                 ch.setStatus("status");
+                ch.setIndex(j);
                 ch_list.add(ch);
             }
 
@@ -115,6 +120,24 @@ public class CommandCenterActivity extends AppCompatActivity {
         if(ExpListItems.contains(item))
             return ExpListItems.indexOf(item);
         return -1;
+    }
+
+    public void onClick(View v){
+
+        Intent intent = new Intent(this, OptionAndValuePicker.class);
+        startActivityForResult(intent, 1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+                String option=data.getStringExtra("option");
+                String value=data.getStringExtra("value");
+                Log.i("Result", "Option "+option+" with value "+value);
+            }
+        }
     }
 
 }

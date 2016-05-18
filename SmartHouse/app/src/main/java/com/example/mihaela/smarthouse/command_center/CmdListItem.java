@@ -12,4 +12,6 @@ public interface CmdListItem {
     public String getStatus();
 
     public void setStatus(String newStatus);
+
+    public void setIndex(int index);
 }

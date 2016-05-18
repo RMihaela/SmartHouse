@@ -21,6 +21,9 @@
         <activity android:name=".command_center.CommandCenterActivity" />
         <activity android:name=".stats.StatsActivity"  android:label="@string/app_name" />
         <activity android:name=".notifications.NotificationsActivity"></activity>
+        <activity android:name=".command_center.NumberPickerActivity" />
+        <activity android:name=".command_center.OptionPickerActivity"/>
+        <activity android:name=".command_center.OptionAndValuePicker"/>
     </application>
 
 </manifest>
