@@ -44,12 +44,8 @@ public class CommandCenterActivity extends AppCompatActivity {
     private CmdListAdapter ExpAdapter;
     private ArrayList<CmdListHeader> ExpListItems;
     private ExpandableListView ExpandList;
-<<<<<<< HEAD
     Map<String, List<ASmartUnit>> outdoorMap = new HashMap<>();
     Map<String, List<ASmartUnit>> indoorMap = new HashMap<>();
-=======
-    public String name = "testare";
->>>>>>> origin/master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -192,7 +188,6 @@ public class CommandCenterActivity extends AppCompatActivity {
             CmdListHeader gru=new CmdListHeader();
             gru.setName(group_name);
 
-<<<<<<< HEAD
 
             ch_list=new ArrayList<CmdListItem>();
 
@@ -287,17 +282,7 @@ public class CommandCenterActivity extends AppCompatActivity {
                         break;
                 }
                 ch.setTitle(title);
-                ch.setSmartUnit(smartUnit);
                 ch.setId(smartUnit.getId());
-=======
-            ArrayList<CmdListItem> ch_list = new ArrayList<CmdListItem>();
-            ch_list.clear();
-            for(int j = 0; j < size; j++){
-                CmdListItem ch = new CmdButtonListItem();
-                ch.setTitle(item_names[j]);
-                ch.setStatus("status");
-                ch.setIndex(j);
->>>>>>> origin/master
                 ch_list.add(ch);
 
             }
@@ -558,7 +543,7 @@ public class CommandCenterActivity extends AppCompatActivity {
 
     public void onClick(View v){
 
-        Intent intent = new Intent(this, OptionAndValuePicker.class);
+        Intent intent = new Intent(this, NumberPickerActivity.class);
         startActivityForResult(intent, 1);
     }
 

@@ -14,14 +14,14 @@ public interface CmdListItem {
     public String getStatus();
 
     public void setStatus(String newStatus);
-<<<<<<< HEAD
+
     public void setId(String id);
     public String getId();
 
     public ASmartUnit getSmartUnit();
     public void setSmartUnit(ASmartUnit unit);
-=======
+
 
     public void setIndex(int index);
->>>>>>> origin/master
+
 }
