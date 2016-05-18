@@ -1,5 +1,7 @@
 package com.example.mihaela.smarthouse.command_center;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,8 +44,12 @@ public class CommandCenterActivity extends AppCompatActivity {
     private CmdListAdapter ExpAdapter;
     private ArrayList<CmdListHeader> ExpListItems;
     private ExpandableListView ExpandList;
+<<<<<<< HEAD
     Map<String, List<ASmartUnit>> outdoorMap = new HashMap<>();
     Map<String, List<ASmartUnit>> indoorMap = new HashMap<>();
+=======
+    public String name = "testare";
+>>>>>>> origin/master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -186,6 +192,7 @@ public class CommandCenterActivity extends AppCompatActivity {
             CmdListHeader gru=new CmdListHeader();
             gru.setName(group_name);
 
+<<<<<<< HEAD
 
             ch_list=new ArrayList<CmdListItem>();
 
@@ -282,6 +289,15 @@ public class CommandCenterActivity extends AppCompatActivity {
                 ch.setTitle(title);
                 ch.setSmartUnit(smartUnit);
                 ch.setId(smartUnit.getId());
+=======
+            ArrayList<CmdListItem> ch_list = new ArrayList<CmdListItem>();
+            ch_list.clear();
+            for(int j = 0; j < size; j++){
+                CmdListItem ch = new CmdButtonListItem();
+                ch.setTitle(item_names[j]);
+                ch.setStatus("status");
+                ch.setIndex(j);
+>>>>>>> origin/master
                 ch_list.add(ch);
 
             }
@@ -538,6 +554,24 @@ public class CommandCenterActivity extends AppCompatActivity {
         if(ExpListItems.contains(item))
             return ExpListItems.indexOf(item);
         return -1;
+    }
+
+    public void onClick(View v){
+
+        Intent intent = new Intent(this, OptionAndValuePicker.class);
+        startActivityForResult(intent, 1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+                String option=data.getStringExtra("option");
+                String value=data.getStringExtra("value");
+                Log.i("Result", "Option "+option+" with value "+value);
+            }
+        }
     }
 
 }

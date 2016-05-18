@@ -27,6 +27,7 @@ public class CmdSwitchListItem implements CmdListItem{
         this.status = newStatus;
     }
 
+<<<<<<< HEAD
     public String getId() {
         return id;
     }
@@ -43,5 +44,10 @@ public class CmdSwitchListItem implements CmdListItem{
 
     public void setId(String id) {
         this.id = id;
+=======
+    @Override
+    public void setIndex(int index) {
+
+>>>>>>> origin/master
     }
 }

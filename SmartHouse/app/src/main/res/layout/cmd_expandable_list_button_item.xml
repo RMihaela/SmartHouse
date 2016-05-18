@@ -44,6 +44,7 @@
         android:layout_marginRight="2dp"
         android:textSize="10dp"
         android:layout_marginTop="2dp"
+        android:onClick="onClick"
         android:layout_alignBottom="@+id/cmdStatusLabel"
         android:layout_marginBottom="2dp" />
 </RelativeLayout>
