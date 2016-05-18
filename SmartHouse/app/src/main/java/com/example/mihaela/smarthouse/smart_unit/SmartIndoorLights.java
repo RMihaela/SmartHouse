@@ -37,6 +37,12 @@ public class SmartIndoorLights extends ASmartUnit {
 
 
     }
+
+    @Override
+    public void openEditorActivity() {
+
+    }
+
     public void method(JSONObject obj){
         //dummy method
     }

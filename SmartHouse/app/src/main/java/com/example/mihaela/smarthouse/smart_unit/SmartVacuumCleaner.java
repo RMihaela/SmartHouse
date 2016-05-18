@@ -36,6 +36,12 @@ public class SmartVacuumCleaner extends ASmartUnit{
 
 
     }
+
+    @Override
+    public void openEditorActivity() {
+
+    }
+
     @Override
     public void initialise() {
         String url = ASmartUnit.urlstub+"c_aspirator/" + this.getId();

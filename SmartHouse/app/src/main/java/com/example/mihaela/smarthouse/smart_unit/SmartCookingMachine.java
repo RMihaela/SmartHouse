@@ -1,9 +1,11 @@
 package com.example.mihaela.smarthouse.smart_unit;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 
 import com.example.mihaela.smarthouse.command_center.CommandCenterActivity;
+import com.example.mihaela.smarthouse.editor_activities.CookingMachineEditor;
 import com.example.mihaela.smarthouse.managers.WebServiceManager;
 import com.example.mihaela.smarthouse.stats.StatsActivity;
 
@@ -16,9 +18,10 @@ import org.json.JSONObject;
 public class SmartCookingMachine extends ASmartUnit {
     private int temperature = 180;
     private final Context context;
-    public SmartCookingMachine(String id, String name,Context context){
+
+    public SmartCookingMachine(String id, String name, Context context) {
         super(id, name);
-        this.context=context;
+        this.context = context;
         this.initialise();
     }
 
@@ -28,34 +31,47 @@ public class SmartCookingMachine extends ASmartUnit {
     }
 
     @Override
+    public void openEditorActivity() {
+        CookingMachineEditor.setSmartUnit(this);
+        Intent intent = new Intent(context, CookingMachineEditor.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
+
+    @Override
     public void initialise() {
-        String url = ASmartUnit.urlstub+"c_aragaz/" + this.getId();
+        String url = ASmartUnit.urlstub + "c_aragaz/" + this.getId();
         WebServiceManager.getInstance(context).startGETRequest(url, this, "parseServerData");
     }
-    public void updateServerData(Integer temperature,Boolean status){
-       this.setTemperature(temperature);
+
+    public void updateServerData(Integer temperature, Boolean status) {
+        this.setTemperature(temperature);
         this.setStatus(status);
-        Integer st=status?1:0;
-        JSONObject obj=new JSONObject();
+        Integer st = status ? 1 : 0;
+        JSONObject obj = new JSONObject();
         try {
-            obj.put("temperatura",temperature);
-            obj.put("stare",st);
+            obj.put("temperatura", temperature);
+            obj.put("stare", st);
+            String url = ASmartUnit.urlstub + "c_aragaz/" + this.getId();
+            WebServiceManager.getInstance(context).startPUTRequest(url, obj, this, "method");
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
 
     }
-    public void method(JSONObject obj){
+
+    public void method(JSONObject obj) {
         //dummy method
     }
+
     @Override
     public void parseServerData(JSONObject responseObject) {
         try {
-            Integer stare=Integer.parseInt(responseObject.getString("stare"));
-            Integer temperature=Integer.parseInt(responseObject.getString("temperatura"));
-            this.setDisplayStatus(this.isStatus()?this.getTemperature().toString()+ "°C":"OFF");
-            this.setStatus(stare==1 ? true :false);
+            Integer stare = Integer.parseInt(responseObject.getString("stare"));
+            Integer temperature = Integer.parseInt(responseObject.getString("temperatura"));
+            this.setDisplayStatus(this.isStatus() ? this.getTemperature().toString() + "°C" : "OFF");
+            this.setStatus(stare == 1 ? true : false);
             this.setTemperature(temperature);
         } catch (JSONException e) {
             e.printStackTrace();

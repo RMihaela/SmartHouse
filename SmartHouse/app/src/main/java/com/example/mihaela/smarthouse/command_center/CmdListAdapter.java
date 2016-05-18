@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -79,6 +80,14 @@ public class CmdListAdapter extends BaseExpandableListAdapter {
 //            Log.d("CREATION", "TITLE: " + child.getTitle().toString() + " STATUS: " + statusTextView.toString());
             titleTextView.setText(child.getTitle().toString());
             statusTextView.setText(child.getStatus());
+
+            Button cmdButton = (Button) convertView.findViewById(R.id.cmdButton);
+            cmdButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                   child.getSmartUnit().openEditorActivity();
+                }
+            });
 
         } else {
             if (child.getClass().getSimpleName().equals("CmdSwitchListItem")) {

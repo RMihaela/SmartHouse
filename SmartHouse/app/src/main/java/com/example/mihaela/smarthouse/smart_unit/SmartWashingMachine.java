@@ -1,9 +1,12 @@
 package com.example.mihaela.smarthouse.smart_unit;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 
 import com.example.mihaela.smarthouse.command_center.CommandCenterActivity;
+import com.example.mihaela.smarthouse.editor_activities.AirConditioningEditor;
+import com.example.mihaela.smarthouse.editor_activities.WashingMachineEditor;
 import com.example.mihaela.smarthouse.managers.WebServiceManager;
 import com.example.mihaela.smarthouse.stats.StatsActivity;
 
@@ -25,9 +28,36 @@ public class SmartWashingMachine extends  ASmartUnit {
         this.initialise();
     }
 
+    public void updateServerData(Integer rpm,String program,Boolean status){
+
+        this.setTemperature(rpm);
+        this.setStatus(status);
+        this.setProgram(program);
+        Integer st=status?1:0;
+        JSONObject obj=new JSONObject();
+        try {
+            obj.put("rotatii",rpm);
+            obj.put("program",program);
+            obj.put("stare",st);
+            String url = ASmartUnit.urlstub+"c_masina_spalat/" + this.getId();
+            WebServiceManager.getInstance(context).startPUTRequest(url,obj,this,"method");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+    }
     @Override
     public void updateServerData(Boolean status) {
 
+    }
+
+    @Override
+    public void openEditorActivity() {
+        WashingMachineEditor.setSmartUnit(this);
+        Intent intent = new Intent(context, WashingMachineEditor.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 
     @Override

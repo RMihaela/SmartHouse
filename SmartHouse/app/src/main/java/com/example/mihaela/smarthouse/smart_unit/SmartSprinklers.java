@@ -31,6 +31,12 @@ public class SmartSprinklers extends ASmartUnit {
         WebServiceManager.getInstance(context).startPOSTRequest(url);
 
     }
+
+    @Override
+    public void openEditorActivity() {
+
+    }
+
     public void method(JSONObject obj){
         //dummy method
     }

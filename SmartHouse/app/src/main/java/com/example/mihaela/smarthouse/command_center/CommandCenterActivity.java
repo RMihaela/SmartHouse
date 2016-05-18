@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ExpandableListView;
 
 import com.example.mihaela.smarthouse.R;
+import com.example.mihaela.smarthouse.editor_activities.TvEditor;
 import com.example.mihaela.smarthouse.smart_unit.ASmartUnit;
 import com.example.mihaela.smarthouse.smart_unit.SmartAC;
 import com.example.mihaela.smarthouse.smart_unit.SmartAudio;
@@ -26,7 +27,6 @@ import com.example.mihaela.smarthouse.smart_unit.SmartWashingMachine;
 import com.example.mihaela.smarthouse.smart_unit.SmartWaterSystem;
 import com.example.mihaela.smarthouse.smart_unit.SmartWeatherSystem;
 import com.example.mihaela.smarthouse.smart_unit.SmartYardDoor;
-import com.example.mihaela.smarthouse.stats.StatsListItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -130,30 +130,12 @@ public class CommandCenterActivity extends AppCompatActivity {
 
         indoorMap.put("Bathroom", aSmartUnitList);
 
-        //Weather
-        aSmartUnitList = new ArrayList<>();
-        ASmartUnit smartWheather = new SmartWeatherSystem("1", "Temperature", this.getApplicationContext());
-        aSmartUnitList.add(smartWheather);
-        smartWheather = new SmartWeatherSystem("2", "Humidity", this.getApplicationContext());
-        aSmartUnitList.add(smartWheather);
-        smartWheather = new SmartWeatherSystem("3", "Wind speed", this.getApplicationContext());
-        aSmartUnitList.add(smartWheather);
-        smartWheather = new SmartWeatherSystem("4", "Precipitation", this.getApplicationContext());
-        aSmartUnitList.add(smartWheather);
 
-        outdoorMap.put("Weather", aSmartUnitList);
 
         //Pool
         aSmartUnitList = new ArrayList<>();
-        ASmartUnit smartPool = new SmartPool("5", "Ph", this.getApplicationContext());
-        aSmartUnitList.add(smartPool);
-        smartPool = new SmartPool("6", "Hardness", this.getApplicationContext());
-        aSmartUnitList.add(smartPool);
-        smartPool = new SmartPool("7", "Temperature", this.getApplicationContext());
-        aSmartUnitList.add(smartPool);
-        smartPool = new SmartPool("8","Alkalinity", this.getApplicationContext());
-        aSmartUnitList.add(smartPool);
-        smartPool = new SmartPool("9","Cover", this.getApplicationContext());
+
+        ASmartUnit smartPool = new SmartPool("9","Cover", this.getApplicationContext());
         aSmartUnitList.add(smartPool);
 
         outdoorMap.put("Pool", aSmartUnitList);
@@ -198,60 +180,8 @@ public class CommandCenterActivity extends AppCompatActivity {
                 String title=new String();
                 CmdListItem ch=null;
                 switch (className){
-                    case "SmartWeatherSystem":
-                        switch (smartUnit.getName()){
-                            case "Temperature":
-                                status = ((SmartWeatherSystem)smartUnit).getTemperature().toString();
-                                ch=new CmdButtonListItem();
-                                ch.setStatus(status);
-                                title=smartUnit.getName();
-                                break;
-                            case "Humidity":
-                                status = ((SmartWeatherSystem)smartUnit).getHumidity().toString();
-                                ch=new CmdButtonListItem();
-                                ch.setStatus(status);
-                                title=smartUnit.getName();
-                                break;
-                            case "Wind speed":
-                                status = ((SmartWeatherSystem)smartUnit).getWindSpeed().toString();
-                                ch=new CmdButtonListItem();
-                                ch.setStatus(status);
-                                title=smartUnit.getName();
-                                break;
-                            case "Precipitation":
-                                status = ((SmartWeatherSystem)smartUnit).getPrecipitations().toString();
-                                ch=new CmdButtonListItem();
-                                ch.setStatus(status);
-                                title=smartUnit.getName();
-                                break;
-                        }
-                        break;
                     case "SmartPool":
                         switch (smartUnit.getName()) {
-                            case "Ph":
-                                status = ((SmartPool)smartUnit).getPh().toString();
-                                ch=new CmdButtonListItem();
-                                ch.setStatus(status);
-                                title=smartUnit.getName();
-                                break;
-                            case "Hardness":
-                                status = ((SmartPool)smartUnit).getHardness().toString();
-                                ch=new CmdButtonListItem();
-                                ch.setStatus(status);
-                                title=smartUnit.getName();
-                                break;
-                            case "Temperature":
-                                status = ((SmartPool)smartUnit).getWaterTemperature().toString();
-                                ch=new CmdButtonListItem();
-                                ch.setStatus(status);
-                                title=smartUnit.getName();
-                                break;
-                            case "Alkalinity":
-                                status = ((SmartPool)smartUnit).getAlkalinity().toString();
-                                ch=new CmdButtonListItem();
-                                ch.setStatus(status);
-                                title=smartUnit.getName();
-                                break;
                             case "Cover":
                                 status = smartUnit.getStringStatus();
                                 ch=new CmdSwitchListItem();
@@ -282,6 +212,7 @@ public class CommandCenterActivity extends AppCompatActivity {
                         break;
                 }
                 ch.setTitle(title);
+                ch.setSmartUnit(smartUnit);
                 ch.setId(smartUnit.getId());
                 ch_list.add(ch);
 
@@ -334,8 +265,9 @@ public class CommandCenterActivity extends AppCompatActivity {
                         title=smartUnit.getName();
                         break;
                     case "SmartCookingMachine":
-                        status=smartUnit.getStringStatus();
-                        ch=new CmdSwitchListItem();
+                        status=((SmartCookingMachine)smartUnit).getDisplayStatus();
+                        ch=new CmdButtonListItem();
+                        ch.setStatus(status);
                         title=smartUnit.getName();
                         break;
                     case "SmartFridge":
@@ -350,9 +282,9 @@ public class CommandCenterActivity extends AppCompatActivity {
                         title=smartUnit.getName();
                         break;
                     case "SmartWashingMachine":
-                        status=smartUnit.getStringStatus();
-                        ch=new CmdSwitchListItem();
-                   
+                        status=((SmartWashingMachine)smartUnit).getDisplayStatus();
+                        ch=new CmdButtonListItem();
+                        ch.setStatus(status);
                         title=smartUnit.getName();
                         break;
                     case "SmartAC":
@@ -396,6 +328,11 @@ public class CommandCenterActivity extends AppCompatActivity {
                 }
             }
 
+    }
+
+    public void refreshItems(){
+        ExpListItems.clear();
+        ExpListItems = SetStandardGroups();
     }
 
     public void switchButtonClicked(View view)
@@ -542,21 +479,15 @@ public class CommandCenterActivity extends AppCompatActivity {
     }
 
     public void onClick(View v){
+        //TvEditor.setSmartUnit(this);
+        Intent intent = new Intent(this, TvEditor.class);
 
-        Intent intent = new Intent(this, NumberPickerActivity.class);
-        startActivityForResult(intent, 1);
+//        startActivityForResult(intent, Constants.REQUEST_CODE_CAPTURE);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-        if (requestCode == 1) {
-            if(resultCode == Activity.RESULT_OK){
-                String option=data.getStringExtra("option");
-                String value=data.getStringExtra("value");
-                Log.i("Result", "Option "+option+" with value "+value);
-            }
-        }
+        refreshItems();
     }
 
 }

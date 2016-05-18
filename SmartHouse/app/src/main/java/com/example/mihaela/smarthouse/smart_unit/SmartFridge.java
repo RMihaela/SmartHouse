@@ -1,9 +1,12 @@
 package com.example.mihaela.smarthouse.smart_unit;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 
 import com.example.mihaela.smarthouse.command_center.CommandCenterActivity;
+import com.example.mihaela.smarthouse.editor_activities.CookingMachineEditor;
+import com.example.mihaela.smarthouse.editor_activities.FridgeEditor;
 import com.example.mihaela.smarthouse.managers.WebServiceManager;
 import com.example.mihaela.smarthouse.stats.StatsActivity;
 
@@ -18,9 +21,9 @@ public class SmartFridge extends ASmartUnit {
     private final Context context;
 
 
-    public SmartFridge(String id, String name,Context context){
+    public SmartFridge(String id, String name, Context context) {
         super(id, name);
-        this.context=context;
+        this.context = context;
         this.initialise();
     }
 
@@ -32,19 +35,19 @@ public class SmartFridge extends ASmartUnit {
         this.temperature = temperature;
     }
 
-    public void updateServerData(Integer temperature,Boolean status){
+    public void updateServerData(Integer temperature, Boolean status) {
         this.setTemperature(temperature);
         this.setStatus(status);
-        Integer st=status?1:0;
-        JSONObject obj=new JSONObject();
+        Integer st = status ? 1 : 0;
+        JSONObject obj = new JSONObject();
         try {
-            obj.put("temperatura",temperature);
-            obj.put("stare",st);
+            obj.put("temperatura", temperature);
+            obj.put("stare", st);
+            String url = ASmartUnit.urlstub + "c_frigider/" + this.getId();
+            WebServiceManager.getInstance(context).startPUTRequest(url, obj, this, "method");
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-
     }
 
     @Override
@@ -53,21 +56,31 @@ public class SmartFridge extends ASmartUnit {
     }
 
     @Override
+    public void openEditorActivity() {
+        FridgeEditor.setSmartUnit(this);
+        Intent intent = new Intent(context, FridgeEditor.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
+
+    @Override
     public void initialise() {
-        String url = ASmartUnit.urlstub+"c_frigider/" + this.getId();
+        String url = ASmartUnit.urlstub + "c_frigider/" + this.getId();
         WebServiceManager.getInstance(context).startGETRequest(url, this, "parseServerData");
     }
-    public void method(JSONObject obj){
+
+    public void method(JSONObject obj) {
         //dummy method
     }
+
     @Override
     public void parseServerData(JSONObject responseObject) {
         try {
-            Integer stare=Integer.parseInt(responseObject.getString("stare"));
-            Integer temperature=Integer.parseInt(responseObject.getString("temperatura"));
-            this.setStatus(stare==1 ? true :false);
+            Integer stare = Integer.parseInt(responseObject.getString("stare"));
+            Integer temperature = Integer.parseInt(responseObject.getString("temperatura"));
+            this.setStatus(stare == 1 ? true : false);
             this.setTemperature(temperature);
-            this.setDisplayStatus(this.isStatus()?this.getTemperature().toString()+ "°C":"OFF");
+            this.setDisplayStatus(this.isStatus() ? this.getTemperature().toString() + "°C" : "OFF");
         } catch (JSONException e) {
             e.printStackTrace();
         }

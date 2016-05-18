@@ -1,11 +1,11 @@
 package com.example.mihaela.smarthouse.smart_unit;
 
 import android.content.Context;
-import android.content.res.AssetFileDescriptor;
+import android.content.Intent;
 import android.util.Log;
 
-import com.example.mihaela.smarthouse.HomeScreen;
 import com.example.mihaela.smarthouse.command_center.CommandCenterActivity;
+import com.example.mihaela.smarthouse.editor_activities.TvEditor;
 import com.example.mihaela.smarthouse.managers.WebServiceManager;
 import com.example.mihaela.smarthouse.stats.StatsActivity;
 
@@ -73,6 +73,14 @@ public class SmartTV extends ASmartUnit {
     @Override
     public void updateServerData(Boolean status) {
 
+    }
+
+    @Override
+    public void openEditorActivity() {
+        TvEditor.setSmartUnit(this);
+        Intent intent = new Intent(context, TvEditor.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 
     public void initialise(){

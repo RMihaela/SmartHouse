@@ -66,6 +66,11 @@ public class SmartPool extends ASmartUnit {
     }
 
     @Override
+    public void openEditorActivity() {
+
+    }
+
+    @Override
     public void initialise() {
         String url ="http://52.38.78.32:8080/api/sensors/pool/default";
         WebServiceManager.getInstance(getContext()).startGETRequest(url, this, "parseServerData");

@@ -1,9 +1,12 @@
 package com.example.mihaela.smarthouse.smart_unit;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 
 import com.example.mihaela.smarthouse.command_center.CommandCenterActivity;
+import com.example.mihaela.smarthouse.editor_activities.AirConditioningEditor;
+import com.example.mihaela.smarthouse.editor_activities.WaterSystemEditor;
 import com.example.mihaela.smarthouse.managers.WebServiceManager;
 import com.example.mihaela.smarthouse.stats.StatsActivity;
 
@@ -16,7 +19,7 @@ import org.json.JSONObject;
 public class SmartWaterSystem extends ASmartUnit {
     private Integer temperature = 30;
     private Integer pressure = 1;
-    private final Context context;
+    public final Context context;
 
     public SmartWaterSystem(String id, String name,Context context){
         super(id, name);
@@ -27,6 +30,28 @@ public class SmartWaterSystem extends ASmartUnit {
     @Override
     public void updateServerData(Boolean status) {
 
+    }
+    public void updateServerData(Integer temperature,Integer pressure){
+        this.setPressure(pressure);
+        this.setTemperature(temperature);
+
+        JSONObject obj=new JSONObject();
+        try {
+            obj.put("temperatura",temperature);
+            obj.put("presiune",pressure);
+
+            String url = ASmartUnit.urlstub+"c_apa/" + this.getId();
+
+            WebServiceManager.getInstance(context).startPUTRequest(url,obj,this,"method");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+    @Override
+    public void openEditorActivity() {
+        WaterSystemEditor.setSmartUnit(this);
+        Intent intent = new Intent(context, WaterSystemEditor.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     }
 
     @Override

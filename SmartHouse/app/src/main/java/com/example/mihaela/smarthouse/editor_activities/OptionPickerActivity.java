@@ -1,4 +1,4 @@
-package com.example.mihaela.smarthouse.command_center;
+package com.example.mihaela.smarthouse.editor_activities;
 
 import android.app.Activity;
 import android.content.Intent;

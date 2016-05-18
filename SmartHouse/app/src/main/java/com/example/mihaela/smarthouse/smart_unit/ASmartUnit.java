@@ -8,7 +8,7 @@ import org.json.JSONObject;
 public abstract class ASmartUnit {
     private String id = new String();
     private String name = new String();
-    public static String urlstub="http://192.168.0.59:6543/api/";
+    public static String urlstub="http://192.168.0.104:6543/api/";
     private String displayStatus=new String() ;
     private boolean status = false;
 
@@ -22,6 +22,8 @@ public abstract class ASmartUnit {
         this.setStatus(false);
     }
     public abstract  void updateServerData(Boolean status);
+
+    public abstract void openEditorActivity();
 
     public abstract void initialise();
 

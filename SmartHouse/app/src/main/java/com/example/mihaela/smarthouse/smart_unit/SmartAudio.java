@@ -47,6 +47,11 @@ public class SmartAudio extends ASmartUnit{
     }
 
     @Override
+    public void openEditorActivity() {
+
+    }
+
+    @Override
     public void initialise() {
         String url = ASmartUnit.urlstub+"c_sistem_audio/" + this.getId();
         WebServiceManager.getInstance(context).startGETRequest(url, this, "parseServerData");

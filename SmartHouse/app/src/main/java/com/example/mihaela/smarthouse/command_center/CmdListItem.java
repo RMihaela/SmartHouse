@@ -19,6 +19,7 @@ public interface CmdListItem {
     public String getId();
 
     public ASmartUnit getSmartUnit();
+
     public void setSmartUnit(ASmartUnit unit);
 
 
