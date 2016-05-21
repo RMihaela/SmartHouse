@@ -25,6 +25,12 @@ public class SmartPool extends ASmartUnit {
         this.context=context;
         this.initialise();
     }
+
+    @Override
+    public void resetToDefault(String unitID) {
+
+    }
+
     public void setServerPH(Integer ph){
         String url ="http://52.38.78.32:8080/api/sensors/pool/default/set/ph/";
         String phToSet=ph.toString();

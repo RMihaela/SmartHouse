@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mihaela.smarthouse"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.example.mihaela.smarthouse.HomeScreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.mihaela.smarthouse.planner.PlannerActivity" />
+        <activity android:name="com.example.mihaela.smarthouse.command_center.CommandCenterActivity" />
+        <activity
+            android:name="com.example.mihaela.smarthouse.stats.StatsActivity"
+            android:label="@string/app_name" />
+        <activity android:name="com.example.mihaela.smarthouse.notifications.NotificationsActivity" />
+        <activity android:name="com.example.mihaela.smarthouse.editor_activities.NumberPickerActivity" />
+        <activity android:name="com.example.mihaela.smarthouse.editor_activities.OptionPickerActivity" />
+        <activity android:name="com.example.mihaela.smarthouse.editor_activities.TvEditor" />
+        <activity android:name="com.example.mihaela.smarthouse.editor_activities.AirConditioningEditor" />
+        <activity android:name="com.example.mihaela.smarthouse.editor_activities.WashingMachineEditor" />
+        <activity android:name="com.example.mihaela.smarthouse.editor_activities.WaterSystemEditor" />
+        <activity android:name="com.example.mihaela.smarthouse.editor_activities.CookingMachineEditor" />
+        <activity android:name="com.example.mihaela.smarthouse.editor_activities.FridgeEditor" />
+    </application>
+
+</manifest>

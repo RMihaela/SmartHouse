@@ -45,7 +45,9 @@ public class WashingMachineEditor extends AppCompatActivity {
         categories.add("Silk");
         categories.add("Wool");
         categories.add("Quick");
-        categories.add("Whites");
+        categories.add("Coloured");
+        categories.add("Synthetic");
+        categories.add("Cotton");
         categories.add("Dry");
         categories.add("Delicate");
         categories.add("Eco");

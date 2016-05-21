@@ -37,6 +37,11 @@ public class SmartGarageDoor extends ASmartUnit {
     }
 
     @Override
+    public void resetToDefault(String unitID) {
+
+    }
+
+    @Override
     public void initialise() {
         String url ="http://52.38.78.32:8080/api/sensors/yard/default";
         WebServiceManager.getInstance(getContext()).startGETRequest(url, this, "parseServerData");

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import com.example.mihaela.smarthouse.R;
+import com.example.mihaela.smarthouse.managers.AlertsManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,7 @@ public class PlannerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planner);
-
+        AlertsManager.setContext(this);
         getPlannerItemsList().add(new PlannerListItem("Plan 0", true));
         getPlannerItemsList().add(new PlannerListItem("Plan 1", true));
         getPlannerItemsList().add(new PlannerListItem("Plan 2", false));

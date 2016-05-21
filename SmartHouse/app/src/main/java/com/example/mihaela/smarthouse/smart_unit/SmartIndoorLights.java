@@ -43,6 +43,11 @@ public class SmartIndoorLights extends ASmartUnit {
 
     }
 
+    @Override
+    public void resetToDefault(String unitID) {
+
+    }
+
     public void method(JSONObject obj){
         //dummy method
     }

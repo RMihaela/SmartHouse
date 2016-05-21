@@ -1,0 +1,230 @@
+[
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\planner_list_item.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\planner_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cmd_expandable_list_button_item.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\cmd_expandable_list_button_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tv.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\activity_tv.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\stats_expandable_list_header.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\stats_expandable_list_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_option_picker.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\activity_option_picker.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\notification_template_lines.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_cooking_machine.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\activity_cooking_machine.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_list_item.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\notification_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_stats.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\activity_stats.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_number_picker.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\activity_number_picker.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_command_center.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\activity_command_center.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_washing_machine.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\activity_washing_machine.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\stats_expandable_list_item.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\stats_expandable_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_notifications.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\activity_notifications.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_home_screen.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\activity_home_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\opt_list_item.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\opt_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_planner.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\activity_planner.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_fridge.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\activity_fridge.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ac.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\activity_ac.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_water_systems.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\activity_water_systems.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cmd_expandable_list_switch_item.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\layout\\cmd_expandable_list_switch_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    }
+]

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/temperaturePicker"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/subButtonOpt"
+        android:layout_toStartOf="@+id/subButtonOpt" />
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pressurePicker"
+        android:orientation="vertical"
+        android:layout_alignTop="@+id/temperaturePicker"
+        android:layout_toRightOf="@+id/subButtonOpt"
+        android:layout_toEndOf="@+id/subButtonOpt" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/subButtonOpt"
+        android:onClick="returnToCmdCenter"
+        android:layout_marginBottom="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/switch1"
+        android:layout_alignStart="@+id/switch1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AC Unit"
+        android:id="@+id/titleTextView"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="On / Off"
+        android:id="@+id/switch1"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/subButtonOpt"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature"
+        android:id="@+id/temperatureTextView"
+        android:layout_marginBottom="39dp"
+        android:textSize="20dp"
+        android:layout_above="@+id/temperaturePicker"
+        android:layout_toLeftOf="@+id/switch1"
+        android:layout_toStartOf="@+id/switch1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intensity"
+        android:id="@+id/intensityTextView"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/temperatureTextView"
+        android:layout_alignRight="@+id/pressurePicker"
+        android:layout_alignEnd="@+id/pressurePicker" />
+
+</RelativeLayout>

@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.example.mihaela.smarthouse.managers.AlertsManager;
 import com.example.mihaela.smarthouse.smart_unit.ASmartUnit;
 import com.example.mihaela.smarthouse.smart_unit.SmartAC;
 import com.example.mihaela.smarthouse.smart_unit.SmartAudio;
@@ -47,6 +48,7 @@ public class StatsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AlertsManager.setContext(this);
         instance = this;
         //Kitchen
         List<ASmartUnit> aSmartUnitList = new ArrayList<>();

@@ -71,6 +71,11 @@ public class SmartTV extends ASmartUnit {
     }
 
     @Override
+    public void resetToDefault(String unitID) {
+
+    }
+
+    @Override
     public void updateServerData(Boolean status) {
 
     }

@@ -27,6 +27,11 @@ public class SmartWaterSystem extends ASmartUnit {
         this.initialise();
     }
 
+    public SmartWaterSystem (String id, String name){
+        super(id, name);
+        this.context = null;
+    }
+
     @Override
     public void updateServerData(Boolean status) {
 
@@ -52,6 +57,7 @@ public class SmartWaterSystem extends ASmartUnit {
         WaterSystemEditor.setSmartUnit(this);
         Intent intent = new Intent(context, WaterSystemEditor.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 
     @Override
@@ -62,6 +68,12 @@ public class SmartWaterSystem extends ASmartUnit {
     public void method(JSONObject obj){
         //dummy method
     }
+
+    @Override
+    public void resetToDefault(String unitID) {
+        updateServerData(20, 2);
+    }
+
     @Override
     public void parseServerData(JSONObject responseObject) {
         try {

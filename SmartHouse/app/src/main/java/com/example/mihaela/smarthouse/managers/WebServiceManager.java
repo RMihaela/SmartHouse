@@ -7,9 +7,11 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.lang.reflect.Method;
@@ -75,6 +77,32 @@ public class WebServiceManager {
 
                     @Override
                     public void onResponse(JSONObject response) {
+                        try {
+                            Method method = obj.getClass().getMethod(objMethod, parameterTypes);
+                            method.invoke(obj, response);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.i("JSON", "That didn't work!" + error.getLocalizedMessage());
+                    }
+                });
+        requestQueue.add(jsonGetRequest);
+    }
+
+    public void startGETArrayRequest(String url, final Object obj, final String objMethod) {
+
+        final Class[] parameterTypes = {JSONArray.class};
+
+        JsonArrayRequest jsonGetRequest = new JsonArrayRequest
+                (Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
+
+                    @Override
+                    public void onResponse(JSONArray response) {
                         try {
                             Method method = obj.getClass().getMethod(objMethod, parameterTypes);
                             method.invoke(obj, response);

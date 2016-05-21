@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\cog_command.png",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\mipmap-xxxhdpi\\cog_command.png"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\idea_notification.png",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\mipmap-xxxhdpi\\idea_notification.png"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\diagram_stats.png",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\mipmap-xxxhdpi\\diagram_stats.png"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\logo.png",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\mipmap-xxxhdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\calendar_planner.png",
+        "source": "C:\\Users\\silviu\\Documents\\IPAndroid\\SmartHouse\\SmartHouse\\app\\src\\main\\res\\mipmap-xxxhdpi\\calendar_planner.png"
+    }
+]

@@ -27,6 +27,12 @@ public class SmartAC extends ASmartUnit {
         this.initialise();
 
     }
+
+    public SmartAC (String id, String name){
+        super(id, name);
+        this.context = null;
+    }
+
     public void updateServerData(Integer temperature,Integer intensity,Boolean status){
         this.setIntensity(intensity);
         this.setTemperature(temperature);
@@ -48,6 +54,11 @@ public class SmartAC extends ASmartUnit {
     }
     public void method(JSONObject obj){
         //dummy method
+    }
+
+    @Override
+    public void resetToDefault(String unitID) {
+        updateServerData(20, 1, true);
     }
 
     @Override
@@ -73,13 +84,13 @@ public class SmartAC extends ASmartUnit {
     @Override
     public void parseServerData(JSONObject responseObject) {
         try {
-            Integer stare=Integer.parseInt(responseObject.getString("stare"));
-            Integer temperature=Integer.parseInt(responseObject.getString("temperatura"));
-            Integer intensity=Integer.parseInt(responseObject.getString("intensitate"));
+            Integer stare = Integer.parseInt(responseObject.getString("stare"));
+            Integer temperature = Integer.parseInt(responseObject.getString("temperatura"));
+            Integer intensity = Integer.parseInt(responseObject.getString("intensitate"));
             this.setIntensity(intensity);
-            this.setStatus(stare==1 ? true :false);
+            this.setStatus(stare == 1 ? true : false);
             this.setTemperature(temperature);
-            this.setDisplayStatus(this.isStatus()?this.getTemperature().toString()+ "°C":"OFF");
+            this.setDisplayStatus(this.isStatus() ? this.getTemperature().toString() + "°C" : "OFF");
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -96,10 +107,8 @@ public class SmartAC extends ASmartUnit {
             instance2.updateSmartUnit(this);
         }
         Log.i("JSON response", responseObject.toString());
-       // updateServerData(this.temperature+20,this.intensity+5,!this.isStatus());
+        // updateServerData(this.temperature+20,this.intensity+5,!this.isStatus());
     }
-
-
 
     public Integer getTemperature() {
         return temperature;

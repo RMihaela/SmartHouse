@@ -2,14 +2,24 @@ package com.example.mihaela.smarthouse.notifications;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 
 import com.example.mihaela.smarthouse.R;
+import com.example.mihaela.smarthouse.managers.AlertsManager;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class NotificationsActivity extends AppCompatActivity {
+
+    public static List<NotificationsListItem> newNotifications;
+
+    public static void initNewNotifList(){
+        if (newNotifications == null) {
+            newNotifications = new ArrayList<>();
+        }
+    }
 
     private List<NotificationsListItem> notificationsItemsList=new ArrayList<>();
     private ListView listView;
@@ -17,15 +27,17 @@ public class NotificationsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AlertsManager.setContext(this);
         setContentView(R.layout.activity_notifications);
-        getNotificationsItemsList().add(new NotificationsListItem("Information","Garage doors will open at 7:00 A.M"));
-        getNotificationsItemsList().add(new NotificationsListItem("Alert","You left the doors open. We took care of that for you"));
+
+        notificationsItemsList.addAll(newNotifications);
+        newNotifications.clear();
 
         setListView((ListView) findViewById(R.id.listView2));
         getListView().setAdapter(new NotificationsListAdapter(this, this.getNotificationsItemsList()));
     }
 
-    public List<NotificationsListItem> getNotificationsItemsList() {
+        public List<NotificationsListItem> getNotificationsItemsList() {
         return notificationsItemsList;
     }
 

@@ -28,6 +28,11 @@ public class SmartWashingMachine extends  ASmartUnit {
         this.initialise();
     }
 
+    public SmartWashingMachine (String id, String name){
+        super(id, name);
+        this.context = null;
+    }
+
     public void updateServerData(Integer rpm,String program,Boolean status){
 
         this.setTemperature(rpm);
@@ -39,6 +44,7 @@ public class SmartWashingMachine extends  ASmartUnit {
             obj.put("rotatii",rpm);
             obj.put("program",program);
             obj.put("stare",st);
+            obj.put("temperatura", 30);
             String url = ASmartUnit.urlstub+"c_masina_spalat/" + this.getId();
             WebServiceManager.getInstance(context).startPUTRequest(url,obj,this,"method");
         } catch (JSONException e) {
@@ -47,6 +53,12 @@ public class SmartWashingMachine extends  ASmartUnit {
 
 
     }
+
+    @Override
+    public void resetToDefault(String unitID) {
+        updateServerData(600, "silk", false);
+    }
+
     @Override
     public void updateServerData(Boolean status) {
 

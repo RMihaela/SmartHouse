@@ -38,6 +38,11 @@ public class SmartBlinds extends   ASmartUnit{
     }
 
     @Override
+    public void resetToDefault(String unitID) {
+        updateServerData(false);
+    }
+
+    @Override
     public void openEditorActivity() {
 
     }

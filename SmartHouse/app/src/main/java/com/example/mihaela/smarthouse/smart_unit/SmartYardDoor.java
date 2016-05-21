@@ -23,6 +23,11 @@ public class SmartYardDoor extends ASmartUnit {
     }
 
     @Override
+    public void resetToDefault(String unitID) {
+
+    }
+
+    @Override
     public void updateServerData(Boolean status) {
         this.setStatus(status);
         String url = "http://52.38.78.32:8080/api/sensors/yard/default/set/yarddooropen/";

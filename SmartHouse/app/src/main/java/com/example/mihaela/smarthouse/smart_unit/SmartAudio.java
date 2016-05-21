@@ -24,6 +24,12 @@ public class SmartAudio extends ASmartUnit{
         this.initialise();
 
     }
+
+    public SmartAudio (String id, String name){
+        super(id, name);
+        this.context = null;
+    }
+
     public void updateServerData(Integer volume,String song,Boolean status){
         this.setVolume(volume);
         this.setSong(song);
@@ -34,11 +40,17 @@ public class SmartAudio extends ASmartUnit{
             obj.put("volum",volume);
             obj.put("melodie",song);
             obj.put("stare",st);
+
+            String url = ASmartUnit.urlstub+"c_sistem_audio/" + this.getId();
+            WebServiceManager.getInstance(context).startPUTRequest(url,obj,this,"method");
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
 
-
+    @Override
+    public void resetToDefault(String unitID) {
+        updateServerData(10, "Timon & Pumba - Hakuna Matata", true);
     }
 
     @Override

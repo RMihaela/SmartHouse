@@ -10,6 +10,7 @@ import android.widget.ExpandableListView;
 
 import com.example.mihaela.smarthouse.R;
 import com.example.mihaela.smarthouse.editor_activities.TvEditor;
+import com.example.mihaela.smarthouse.managers.AlertsManager;
 import com.example.mihaela.smarthouse.smart_unit.ASmartUnit;
 import com.example.mihaela.smarthouse.smart_unit.SmartAC;
 import com.example.mihaela.smarthouse.smart_unit.SmartAudio;
@@ -50,6 +51,7 @@ public class CommandCenterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AlertsManager.setContext(this);
         instance = this;
         setContentView(R.layout.activity_command_center);
 

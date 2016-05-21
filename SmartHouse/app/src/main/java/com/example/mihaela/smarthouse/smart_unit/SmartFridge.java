@@ -27,6 +27,11 @@ public class SmartFridge extends ASmartUnit {
         this.initialise();
     }
 
+    public SmartFridge (String id, String name){
+        super(id, name);
+        this.context = null;
+    }
+
     public Integer getTemperature() {
         return temperature;
     }
@@ -71,6 +76,11 @@ public class SmartFridge extends ASmartUnit {
 
     public void method(JSONObject obj) {
         //dummy method
+    }
+
+    @Override
+    public void resetToDefault(String unitID) {
+        updateServerData(3, true);
     }
 
     @Override

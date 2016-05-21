@@ -31,6 +31,11 @@ public class SmartOutdoorLights extends ASmartUnit {
     }
 
     @Override
+    public void resetToDefault(String unitID) {
+
+    }
+
+    @Override
     public void openEditorActivity() {
 
     }

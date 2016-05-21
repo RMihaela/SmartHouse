@@ -25,6 +25,11 @@ public class SmartCookingMachine extends ASmartUnit {
         this.initialise();
     }
 
+    public SmartCookingMachine (String id, String name){
+        super(id, name);
+        this.context = null;
+    }
+
     @Override
     public void updateServerData(Boolean status) {
 
@@ -59,6 +64,11 @@ public class SmartCookingMachine extends ASmartUnit {
         }
 
 
+    }
+
+    @Override
+    public void resetToDefault(String unitID) {
+        updateServerData(60, false);
     }
 
     public void method(JSONObject obj) {
