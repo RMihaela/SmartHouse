@@ -6,17 +6,10 @@
 package com.example.mihaela.smarthouse.notifications.indoorprocessing;
 
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.util.Log;
-
-import com.example.mihaela.smarthouse.HomeScreen;
-import com.example.mihaela.smarthouse.command_center.CommandCenterActivity;
 import com.example.mihaela.smarthouse.managers.AlertsManager;
 import com.example.mihaela.smarthouse.notifications.NotificationsActivity;
 import com.example.mihaela.smarthouse.notifications.NotificationsListItem;
 import com.example.mihaela.smarthouse.smart_unit.ASmartUnit;
-import com.example.mihaela.smarthouse.smart_unit.SmartCookingMachine;
 import com.example.mihaela.smarthouse.smart_unit.SmartFridge;
 
 import java.util.logging.Level;

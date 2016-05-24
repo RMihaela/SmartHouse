@@ -1,1 +1,1 @@
-include ':app', ':org.json', ':json-simple-1.1.1'
+include ':app'

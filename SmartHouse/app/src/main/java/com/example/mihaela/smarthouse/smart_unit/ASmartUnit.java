@@ -8,7 +8,8 @@ import org.json.JSONObject;
 public abstract class ASmartUnit {
     private String id = new String();
     private String name = new String();
-    public static String urlstub="http://192.168.43.211:6543/api/";
+    public static String urlstub="http://192.168.0.108:6543/api/";
+    public static String ip="192.168.0.108";
     private String displayStatus=new String() ;
     private boolean status = false;
 

@@ -3,6 +3,8 @@
     package="com.example.mihaela.smarthouse">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="23" />
 
     <application
         android:allowBackup="true"
@@ -10,7 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeScreen">
+        <activity android:name=".home_activity.HomeScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +30,11 @@
         <activity android:name=".editor_activities.WashingMachineEditor"/>
         <activity android:name=".editor_activities.WaterSystemEditor"/>
         <activity android:name=".editor_activities.CookingMachineEditor"/>
-        <activity android:name=".editor_activities.FridgeEditor"/>
+        <activity android:name=".editor_activities.FridgeEditor"/><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

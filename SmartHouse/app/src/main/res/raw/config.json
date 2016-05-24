@@ -1,0 +1,7 @@
+{
+    "input" : {
+    "day" : [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ],
+    "hour" : [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 ]
+    },
+    "output" : [ "open_garage_door", "close_garage_door", "turn_on_yard_lights", "turn_off_yard_lights",  "start_yard_sprinklers", "stop_yard_sprinklers", "cover_pool", "uncover_pool", "open_yard_door", "close_yard_door" ]
+}

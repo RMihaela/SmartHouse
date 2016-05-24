@@ -70,7 +70,7 @@ public class CommandCenterActivity extends AppCompatActivity {
         aSmartUnitList.add(tv);
         ASmartUnit blinds = new SmartBlinds("798dd7", "Blinds", this.getApplicationContext());
         aSmartUnitList.add(blinds);
-        ASmartUnit indoorLights = new SmartIndoorLights("465207", "Lights", this.getApplicationContext());
+        ASmartUnit indoorLights = new SmartIndoorLights("0e6c59", "Lights", this.getApplicationContext());
         aSmartUnitList.add(indoorLights);
         ASmartUnit vacuum = new SmartVacuumCleaner("0c6d56", "Vacuum Cleaner", this.getApplicationContext());
         aSmartUnitList.add(vacuum);
@@ -92,7 +92,7 @@ public class CommandCenterActivity extends AppCompatActivity {
         aSmartUnitList.add(tv);
         blinds = new SmartBlinds("9bb6ed", "Blinds", this.getApplicationContext());
         aSmartUnitList.add(blinds);
-        indoorLights = new SmartIndoorLights("c303df", "Lights", this.getApplicationContext());
+        indoorLights = new SmartIndoorLights("2e7da0", "Lights", this.getApplicationContext());
         aSmartUnitList.add(indoorLights);
         vacuum = new SmartVacuumCleaner("29073f", "Vaccum Cleaner", this.getApplicationContext());
         aSmartUnitList.add(vacuum);
@@ -108,7 +108,7 @@ public class CommandCenterActivity extends AppCompatActivity {
         aSmartUnitList.add(tv);
         blinds = new SmartBlinds("bca0cf", "Blinds", this.getApplicationContext());
         aSmartUnitList.add(blinds);
-        indoorLights = new SmartIndoorLights("c6936a", "Lights", this.getApplicationContext());
+        indoorLights = new SmartIndoorLights("3deb35", "Lights", this.getApplicationContext());
         aSmartUnitList.add(indoorLights);
         vacuum = new SmartVacuumCleaner("7b6c00", "Vaccum Cleaner", this.getApplicationContext());
         aSmartUnitList.add(vacuum);
@@ -123,7 +123,7 @@ public class CommandCenterActivity extends AppCompatActivity {
         aSmartUnitList = new ArrayList<>();
         blinds = new SmartBlinds("bce4eb", "Blinds", this.getApplicationContext());
         aSmartUnitList.add(blinds);
-        indoorLights = new SmartIndoorLights("e6f43f", "Lights", this.getApplicationContext());
+        indoorLights = new SmartIndoorLights("b2b235", "Lights", this.getApplicationContext());
         aSmartUnitList.add(indoorLights);
         ASmartUnit washingMachine = new SmartWashingMachine("26bd1a", "Washing Machine", this.getApplicationContext());
         aSmartUnitList.add(washingMachine);

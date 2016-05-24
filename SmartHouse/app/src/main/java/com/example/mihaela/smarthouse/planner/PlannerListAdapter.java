@@ -5,10 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.mihaela.smarthouse.R;
+import com.example.mihaela.smarthouse.smart_unit.ASmartUnit;
 
 import java.util.ArrayList;
 
@@ -62,12 +64,19 @@ public class PlannerListAdapter extends BaseAdapter {
         if (vi == null)
             vi = getInflater().inflate(R.layout.planner_list_item, null);
 
-        PlannerListItem plannerItem = plannerItemsList.get(position);
+        final PlannerListItem plannerItem = plannerItemsList.get(position);
 
         TextView title = (TextView) vi.findViewById(R.id.title);
         title.setText(plannerItem.getTitle());
-        Switch switchButton = (Switch) vi.findViewById(R.id.switchButton);
+        final Switch switchButton = (Switch) vi.findViewById(R.id.switchButton);
         switchButton.setChecked(plannerItem.isStarted());
+        switchButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                plannerItem.setStarted(switchButton.isChecked());
+            }
+        });
         return vi;
     }
 

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.NumberPicker;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -100,13 +101,13 @@ public class CmdListAdapter extends BaseExpandableListAdapter {
                 title.setText(child.getTitle().toString());
                 final Switch switchButton = (Switch) convertView.findViewById(R.id.cmdSwitchButton);
                 switchButton.setChecked(child.getStatus().equalsIgnoreCase("on"));
-                switchButton.setOnClickListener(new View.OnClickListener() {
+                switchButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     @Override
-                    public void onClick(View v) {
+                    public void onCheckedChanged(CompoundButton buttonView,
+                                                 boolean isChecked) {
                         child.setStatus(switchButton.isChecked() ? "ON" : "OFF");
                         ASmartUnit smUnit = child.getSmartUnit();
                         smUnit.updateServerData(switchButton.isChecked());
-
                     }
                 });
 

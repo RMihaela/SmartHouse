@@ -8,6 +8,7 @@ package com.example.mihaela.smarthouse.notifications.indoorprocessing;
 import android.content.Context;
 
 import com.example.mihaela.smarthouse.managers.WebServiceManager;
+import com.example.mihaela.smarthouse.smart_unit.ASmartUnit;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -24,7 +25,7 @@ import org.json.JSONObject;
 public class DataAnalyser extends TimerTask {
     private Context context;
 
-    public String ip = "192.168.43.211";
+    public String ip = ASmartUnit.ip;
     String masSpalatRequestURL = "http://" + ip + ":6543/api/c_masina_spalat";
     String masSpalatTargetURL = "";
     

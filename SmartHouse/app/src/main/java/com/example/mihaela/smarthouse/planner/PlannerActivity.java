@@ -6,6 +6,7 @@ import android.widget.ListView;
 
 import com.example.mihaela.smarthouse.R;
 import com.example.mihaela.smarthouse.managers.AlertsManager;
+import com.example.mihaela.smarthouse.notifications.NotificationsListItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,21 +16,36 @@ Frida
  */
 
 public class PlannerActivity extends AppCompatActivity {
-    private List<PlannerListItem> plannerItemsList = new ArrayList<>();
+    public static List<PlannerListItem> newPlans = new ArrayList<>();
+    public List<PlannerListItem> plannerItemsList = new ArrayList<>();
     private ListView listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planner);
         AlertsManager.setContext(this);
-        getPlannerItemsList().add(new PlannerListItem("Plan 0", true));
-        getPlannerItemsList().add(new PlannerListItem("Plan 1", true));
-        getPlannerItemsList().add(new PlannerListItem("Plan 2", false));
-        getPlannerItemsList().add(new PlannerListItem("Plan 3", true));
+        plannerItemsList.addAll(newPlans);
 
         setListView((ListView) findViewById(R.id.listView));
         getListView().setAdapter(new PlannerListAdapter(this, (ArrayList<PlannerListItem>) getPlannerItemsList()));
     }
+
+    @Override
+    public void finish() {
+        clearDisabledPlans();
+        super.finish();
+    }
+
+    private void clearDisabledPlans(){
+        List<PlannerListItem> toRemove=new ArrayList<>();
+        for (PlannerListItem listItem : newPlans){
+            if (!listItem.isStarted()){
+                toRemove.add(listItem);
+            }
+        }
+        newPlans.removeAll(toRemove);
+    }
+
 
     public List<PlannerListItem> getPlannerItemsList() {
         return plannerItemsList;
@@ -49,6 +65,11 @@ public class PlannerActivity extends AppCompatActivity {
 
     public void addPlanerItem(PlannerListItem plannItemList){
         this.plannerItemsList.add(plannItemList);
+    }
+
+    public static void addPlan(String title, boolean isActive){
+        PlannerListItem listItem = new PlannerListItem(title, isActive);
+        newPlans.add(listItem);
     }
 
 
